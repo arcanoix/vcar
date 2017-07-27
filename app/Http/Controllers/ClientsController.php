@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -15,7 +16,7 @@ class ClientsController extends Controller
     {
         $clients = Client::all();
 
-        return view('clients.show', [
+        return view('clients.index', [
             'clients' => $clients,
         ]);
     }
@@ -25,21 +26,31 @@ class ClientsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getCreate()
     {
-        //
+        return view('clients.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function postCreate()
     {
-        //
+        $rules = [
+            'name' => 'required',
+        ];
+
+        $messages = [
+            'name.required' => 'Necesitas ingresar el nombre del cliente',
+        ];
+
+        $this->validate($request, $rules, $messages);
+
+        $client = new Clients();
+        $client->name = $request->input('name');
+
+        $client->save();
+
+        return back()-with('notification', 'Cliente registrado correctamente');
     }
+
 
     /**
      * Display the specified resource.

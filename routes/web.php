@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index');
+
+Route::get('/clientes', 'ClientsController@index');

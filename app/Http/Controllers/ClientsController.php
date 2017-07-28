@@ -87,16 +87,15 @@ class ClientsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $rules = [
+            'name' => 'required',
+        ];
 
-        // $rules = [
-        //     'name' => 'required',
-        // ];
-        //
-        // $messages = [
-        //     'name.required' => 'Necesitas ingresar el nombre del cliente',
-        // ];
-        //
-        // $this->validate($request, $rules, $messages);
+        $messages = [
+            'name.required' => 'Necesitas ingresar el nombre del cliente',
+        ];
+
+        $this->validate($request, $rules, $messages);
 
         $client = Client::find($id);
 

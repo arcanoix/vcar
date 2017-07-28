@@ -23,3 +23,8 @@ Route::get('/clientes', 'ClientsController@index');
 
 Route::get('/clientes/create', 'ClientsController@getCreate');
 Route::post('/clientes/create', 'ClientsController@postCreate');
+
+Route::get('/clientes/{id}/edit', 'ClientsController@edit');
+Route::post('/clientes/{id}/edit', 'ClientsController@update');
+
+Route::get('/clientes/{id}/delete', 'ClientsController@delete');

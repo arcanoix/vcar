@@ -6,24 +6,39 @@
             <div class="content-box-large">
                 <h1 class="page-header">Clientes</h1>
                 <div class="panel-body">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Fecha</th>
-                          <th>Nombre</th>
-                          <th>Acciones</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                          @foreach ($clients as $client)
+                    @if (session('notification'))
+                        <div class="alert alert-success">
+                            {{ session('notification') }}
+                        </div>
+                    @endif
+                    @if (!$clients->isEmpty())
+                        <table class="table table-bordered">
+                          <thead>
                             <tr>
-                              <td>{{ $client->created_at->format('d/m/Y') }}</td>
-                              <td>{{ $client->name }}</td>
-                              <td></td>
+                              <th>Fecha</th>
+                              <th>Nombre</th>
+                              <th>Acciones</th>
                             </tr>
-                        @endforeach
-                      </tbody>
-                    </table>
+                          </thead>
+                          <tbody>
+                              @foreach ($clients as $client)
+                                <tr>
+                                  <td>{{ $client->created_at->format('d/m/Y') }}</td>
+                                  <td>{{ $client->name }}</td>
+                                  <td>
+                                      <a href="/clientes/{{ $client->id }}/edit" class="btn btn-info">Editar</a>
+                                      <a href="/clientes/{{ $client->id }}/delete" class="btn btn-danger">Eliminar</a>
+                                  </td>
+                                </tr>
+                            @endforeach
+                          </tbody>
+                        </table>
+                    @else
+                        <div class="alert alert-warning">
+                            Por el momento aún no hay registro de clientes.
+                        </div>
+                    @endif
+
                 </div>
             </div>
         </div>

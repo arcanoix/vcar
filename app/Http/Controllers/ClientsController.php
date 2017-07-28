@@ -71,7 +71,11 @@ class ClientsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = Client::find($id);
+
+        return view('clients.edit', [
+            'client' => $client,
+        ]);
     }
 
     /**
@@ -83,7 +87,24 @@ class ClientsController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        // $rules = [
+        //     'name' => 'required',
+        // ];
         //
+        // $messages = [
+        //     'name.required' => 'Necesitas ingresar el nombre del cliente',
+        // ];
+        //
+        // $this->validate($request, $rules, $messages);
+
+        $client = Client::find($id);
+
+        $client->name = $request->input('name');
+
+        $client->save();
+
+        return back()->with('notification', 'Cliente actualizado correctamente');
     }
 
     /**
@@ -92,8 +113,12 @@ class ClientsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        // delete
+        $client = Client::find($id);
+        $client->delete();
+
+        return back()->with('notification', 'Cliente eliminado correctamente');
     }
 }

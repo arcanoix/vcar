@@ -40,3 +40,13 @@ $factory->define(App\Client::class, function (Faker\Generator $faker) {
         'created_at' => $faker->dateTimeThisDecade,
     ];
 });
+
+
+$factory->define(App\Transport::class, function (Faker\Generator $faker) {
+    return [
+        'name' => 'Camion'.' '.random_int(1, 5),
+        'brand' => 'Volvo',
+        'model' => 'VNR'. ' '. random_int(1, 500),
+        'created_at' => $faker->dateTimeThisDecade,
+    ];
+});

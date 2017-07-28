@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index');
 
+
+//Clientes
 Route::get('/clientes', 'ClientsController@index');
 
 Route::get('/clientes/create', 'ClientsController@getCreate');
@@ -28,3 +30,14 @@ Route::get('/clientes/{id}/edit', 'ClientsController@edit');
 Route::post('/clientes/{id}/edit', 'ClientsController@update');
 
 Route::get('/clientes/{id}/delete', 'ClientsController@delete');
+
+//Transporte
+Route::get('/transportes', 'TransportController@index');
+
+Route::get('/transportes/create', 'TransportController@getCreate');
+Route::post('/transportes/create', 'TransportController@postCreate');
+
+Route::get('/transportes/{id}/edit', 'TransportController@edit');
+Route::post('/transportes/{id}/edit', 'TransportController@update');
+
+Route::get('/transportes/{id}/delete', 'TransportController@delete');

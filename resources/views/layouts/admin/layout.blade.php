@@ -48,6 +48,13 @@
                   <a class="dropdown-item" href="/clientes/create">Nuevo cliente</a>
                 </div>
              </li>
+             <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Transportes</a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="/transportes">Todos los transportes</a>
+                   <a class="dropdown-item" href="/transportes/create">Nuevo transporte</a>
+                 </div>
+              </li>
           </ul>
         </nav>
 

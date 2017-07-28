@@ -33,6 +33,14 @@
                             @endforeach
                           </tbody>
                         </table>
+
+                        <div class="col-12">
+                            <div class="mt-5 mb-5 mx-auto">
+                                @if (count($clients))
+                                    {{ $clients->links('pagination::bootstrap-4') }}
+                                @endif
+                            </div>
+                        </div>
                     @else
                         <div class="alert alert-warning">
                             Por el momento aún no hay registro de clientes.

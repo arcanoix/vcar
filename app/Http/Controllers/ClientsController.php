@@ -31,7 +31,7 @@ class ClientsController extends Controller
         return view('clients.create');
     }
 
-    public function postCreate()
+    public function postCreate(Request $request)
     {
         $rules = [
             'name' => 'required',
@@ -43,12 +43,12 @@ class ClientsController extends Controller
 
         $this->validate($request, $rules, $messages);
 
-        $client = new Clients();
+        $client = new Client();
         $client->name = $request->input('name');
 
         $client->save();
 
-        return back()-with('notification', 'Cliente registrado correctamente');
+        return back()->with('notification', 'Cliente registrado correctamente');
     }
 
 

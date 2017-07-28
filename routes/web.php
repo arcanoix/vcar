@@ -20,3 +20,6 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index');
 
 Route::get('/clientes', 'ClientsController@index');
+
+Route::get('/clientes/create', 'ClientsController@getCreate');
+Route::post('/clientes/create', 'ClientsController@postCreate');

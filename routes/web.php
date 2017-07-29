@@ -41,3 +41,14 @@ Route::get('/transportes/{id}/edit', 'TransportController@edit');
 Route::post('/transportes/{id}/edit', 'TransportController@update');
 
 Route::get('/transportes/{id}/delete', 'TransportController@delete');
+
+//Choferes
+Route::get('/choferes', 'DriverController@index');
+
+Route::get('/choferes/create', 'DriverController@getCreate');
+Route::post('/choferes/create', 'DriverController@postCreate');
+
+Route::get('/choferes/{id}/edit', 'DriverController@edit');
+Route::post('/choferes/{id}/edit', 'DriverController@update');
+
+Route::get('/choferes/{id}/delete', 'DriverController@delete');

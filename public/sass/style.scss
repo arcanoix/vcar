@@ -1,22 +1,15 @@
-@charset "UTF-8";
-/* line 1, /Users/lramirez/_sites/vimocar/public/sass/style.scss */
 #licencia .custom-file-control:lang(en)::after {
   content: "Seleccionar licencia";
 }
 
-/* line 5, /Users/lramirez/_sites/vimocar/public/sass/style.scss */
 #licencia .custom-file-control:lang(en)::before {
   content: "Buscar";
 }
 
-/* line 9, /Users/lramirez/_sites/vimocar/public/sass/style.scss */
 #certificado .custom-file-control:lang(en)::after {
   content: "Seleccionar certificado médico";
 }
 
-/* line 13, /Users/lramirez/_sites/vimocar/public/sass/style.scss */
 #certificado .custom-file-control:lang(en)::before {
   content: "Buscar";
 }
-
-/*# sourceMappingURL=../css/style.map */

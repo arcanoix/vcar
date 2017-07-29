@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
         $users = factory(App\User::class)->create();
 
         $transports = factory(App\Transport::class)->times(5)->create();
+
+        $drivers = factory(App\Driver::class)->times(10)->create();
     }
 }

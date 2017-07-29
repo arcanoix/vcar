@@ -41,7 +41,7 @@ class ClientsController extends Controller
 
         $client->save();
 
-        return back()->with('notification', 'Cliente registrado correctamente');
+        return redirect('/clientes')->with('notification', 'Cliente registrado correctamente');
     }
 
 
@@ -80,7 +80,7 @@ class ClientsController extends Controller
 
         $client->save();
 
-        return back()->with('notification', 'Cliente actualizado correctamente');
+        return redirect('/clientes')->with('notification', 'Cliente actualizado correctamente');
     }
 
     public function delete($id)
@@ -89,6 +89,6 @@ class ClientsController extends Controller
         $client = Client::find($id);
         $client->delete();
 
-        return back()->with('notification', 'Cliente eliminado correctamente');
+        return redirect('/clientes')->with('notification', 'Cliente eliminado correctamente');
     }
 }

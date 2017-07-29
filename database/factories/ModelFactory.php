@@ -50,3 +50,13 @@ $factory->define(App\Transport::class, function (Faker\Generator $faker) {
         'created_at' => $faker->dateTimeThisDecade,
     ];
 });
+
+$factory->define(App\Driver::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->firstName,
+        'lastname' => $faker->lastName,
+        'licence' => $faker->image($dir = '/tmp', $width = 640, $height = 480),
+        'medical_certificate' => $faker->image($dir = '/tmp', $width = 640, $height = 480),
+        'observation' => $faker->realText(random_int(20, 200)),
+    ];
+});

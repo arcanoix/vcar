@@ -55,6 +55,13 @@
                    <a class="dropdown-item" href="/transportes/create">Nuevo transporte</a>
                  </div>
               </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choferes</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/choferes">Todos los choferes</a>
+                    <a class="dropdown-item" href="/choferes/create">Nuevo chofer</a>
+                  </div>
+               </li>
           </ul>
         </nav>
 
@@ -75,5 +82,6 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Sweetalert2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.js"></script>
+    <script src="{{ asset('js/dashboard.js') }}"></script>
   </body>
 </html>

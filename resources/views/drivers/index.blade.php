@@ -4,31 +4,37 @@
     <div class="row">
         <div class="col-md-12">
             <div class="content-box-large">
-                <h1 class="page-header">Transportes</h1>
+                <h1 class="page-header">Choferes</h1>
                 <div class="panel-body">
                     @if (session('notification'))
                         <div class="alert alert-success">
                             {{ session('notification') }}
                         </div>
                     @endif
-                    @if (!$transports->isEmpty())
+                    @if (!$drivers->isEmpty())
                         <table class="table table-bordered">
                           <thead>
                             <tr>
                               <th>Nombre</th>
-                              <th>Marca</th>
-                              <th>Modelo</th>
+                              <th>Apellido</th>
+                              <th>Documentos</th>
+                              <th>Observaciones</th>
+                              <th>Acciones</th>
                             </tr>
                           </thead>
                           <tbody>
-                              @foreach ($transports as $transport)
+                              @foreach ($drivers as $driver)
                                 <tr>
-                                  <td>{{ $transport->name }}</td>
-                                  <td>{{ $transport->brand }}</td>
-                                  <td>{{ $transport->model }}</td>
+                                  <td>{{ $driver->name }}</td>
+                                  <td>{{ $driver->lastname }}</td>
                                   <td>
-                                      <a href="/transportes/{{ $transport->id }}/edit" class="btn btn-info btn-sm btn-block">Editar</a>
-                                      <a href="/transportes/{{ $transport->id }}/delete" class="btn btn-danger btn-sm btn-block">Eliminar</a>
+                                      <a href="" class="btn btn-info btn-sm btn-block">Licencia</a>
+                                      <a href="" class="btn btn-danger btn-sm btn-block">C. Médico</a>
+                                  </td>
+                                  <td>{{ $driver->observation }}</td>
+                                  <td>
+                                      <a href="/choferes/{{ $driver->id }}/edit" class="btn btn-info btn-sm btn-block">Editar</a>
+                                      <a href="/choferes/{{ $driver->id }}/delete" class="btn btn-danger btn-sm btn-block">Eliminar</a>
                                   </td>
                                 </tr>
                                 @endforeach
@@ -37,14 +43,14 @@
 
                         <div class="col-12">
                             <div class="mt-5 mb-5 mx-auto">
-                                @if (count($transports))
-                                    {{ $transports->links('pagination::bootstrap-4') }}
+                                @if (count($drivers))
+                                    {{ $drivers->links('pagination::bootstrap-4') }}
                                 @endif
                             </div>
                         </div>
                     @else
                         <div class="alert alert-warning">
-                            Por el momento aún no hay registro de transportes.
+                            Por el momento aún no hay registro de choferes.
                         </div>
                     @endif
 

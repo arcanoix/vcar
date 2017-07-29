@@ -27,10 +27,14 @@ class TransportController extends Controller
     {
         $rules = [
             'name' => 'required',
+            'brand' => 'required',
+            'model' => 'required'
         ];
 
         $messages = [
-            'name.required' => 'Necesitas ingresar el nombre del cliente',
+            'name.required' => 'Necesitas ingresar el nombre del Transporte',
+            'brand.required' => 'Necesitas ingresar la marca del Transporte',
+            'model.required' => 'Necesitas ingresar el modelo del Transporte',
         ];
 
         $this->validate($request, $rules, $messages);
@@ -42,35 +46,9 @@ class TransportController extends Controller
 
         $transport->save();
 
-        return back()->with('notification', 'Transporte registrado correctamente');
+        return redirect('/transportes')->with('notification', 'Transporte registrado correctamente');
     }
 
-
-    public function store(Request $request)
-    {
-        $rules = [
-            'name' => 'required',
-            'brand' => 'required',
-            'model' => 'required'
-        ];
-
-        $messages = [
-            'name.required' => 'Necesitas ingresar el nombre del transporte',
-            'brand.required' => 'Necesitas ingresar una marca del transporte',
-            'model.required' => 'Necesitas ingresar un modelo del transporte',
-        ];
-
-        $this->validate($request, $rules, $messages);
-
-        $transport = new Client();
-        $transport->name = $request->input('name');
-        $transport->brand = $request->input('brand');
-        $transport->model = $request->input('model');
-
-        $transport->save();
-
-        return back()->with('notification', 'Transporte registrado correctamente');
-    }
 
 
     public function show(Transport $transport)
@@ -109,7 +87,7 @@ class TransportController extends Controller
 
         $transport->save();
 
-        return back()->with('notification', 'Transporte actualizado correctamente');
+        return redirect('/transportes')->with('notification', 'Transporte actualizado correctamente');
     }
 
 
@@ -119,6 +97,6 @@ class TransportController extends Controller
          $transport = Transport::find($id);
         $transport->delete();
 
-        return back()->with('notification', 'Cliente eliminado correctamente');
+        return redirect('/transportes')->with('notification', 'Cliente eliminado correctamente');
     }
 }

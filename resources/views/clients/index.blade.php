@@ -26,8 +26,8 @@
                                   <td>{{ $client->created_at->format('d/m/Y') }}</td>
                                   <td>{{ $client->name }}</td>
                                   <td>
-                                      <a href="/clientes/{{ $client->id }}/edit" class="btn btn-info btn-sm btn-block">Editar</a>
-                                      <a href="/clientes/{{ $client->id }}/delete" class="btn btn-danger btn-sm btn-block">Eliminar</a>
+                                      <a href="/clientes/{{ $client->id }}/edit" class="badge badge-info">Editar</a>
+                                      <a href="/clientes/{{ $client->id }}/delete" class="badge badge-danger">Eliminar</a>
                                   </td>
                                 </tr>
                             @endforeach

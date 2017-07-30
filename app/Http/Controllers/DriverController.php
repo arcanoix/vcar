@@ -78,7 +78,7 @@ class DriverController extends Controller
 
         $this->validate($request, $rules, $messages);
 
-        $driver = new Driver();
+        $driver = Driver::find($id);
         $driver->name = $request->input('name');
         $driver->lastname = $request->input('lastname');
         $driver->licence = $request->input('licence');

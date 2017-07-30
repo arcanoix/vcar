@@ -18,7 +18,8 @@
                               <th>Nombre</th>
                               <th>Apellido</th>
                               <th>Documentos</th>
-                              <th>Observaciones</th>
+                              <th>Multas</th>
+                              {{-- <th>Observaciones</th> --}}
                               <th>Acciones</th>
                             </tr>
                           </thead>
@@ -28,13 +29,18 @@
                                   <td>{{ $driver->name }}</td>
                                   <td>{{ $driver->lastname }}</td>
                                   <td>
-                                      <a href="" class="btn btn-info btn-sm btn-block">Licencia</a>
-                                      <a href="" class="btn btn-danger btn-sm btn-block">C. Médico</a>
+                                      <a href="" class="badge badge-default">Licencia</a>
+                                      <a href="" class="badge badge-default">C. Médico</a>
                                   </td>
-                                  <td>{{ $driver->observation }}</td>
                                   <td>
-                                      <a href="/choferes/{{ $driver->id }}/edit" class="btn btn-info btn-sm btn-block">Editar</a>
-                                      <a href="/choferes/{{ $driver->id }}/delete" class="btn btn-danger btn-sm btn-block">Eliminar</a>
+                                      <a href="/choferes/{{ $driver->id }}/multas" class="badge badge-primary">Ver multas</a>
+                                      <a href="/choferes/{{ $driver->id }}/multas/create" class="badge badge-success">Añadir Multa</a>
+                                  </td>
+                                  {{-- <td>{{ $driver->observation }}</td> --}}
+                                  <td>
+                                      <a href="/choferes/{{ $driver->id}}/perfil" class="badge badge-default">Ver Perfil</a>
+                                      <a href="/choferes/{{ $driver->id }}/edit" class="badge badge-info">Editar</a>
+                                      <a href="/choferes/{{ $driver->id }}/delete" class="badge badge-danger">Eliminar</a>
                                   </td>
                                 </tr>
                                 @endforeach

@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
         $transports = factory(App\Transport::class)->times(5)->create();
 
         $drivers = factory(App\Driver::class)->times(10)->create();
+
+        $drivers->each(function (App\Driver $driver) use ($drivers) {
+            factory(App\Ticket::class)->times(3)->create([
+                'driver_id' => $driver->id,
+            ]);
+        });
     }
 }

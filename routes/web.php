@@ -52,3 +52,14 @@ Route::get('/choferes/{id}/edit', 'DriverController@edit');
 Route::post('/choferes/{id}/edit', 'DriverController@update');
 
 Route::get('/choferes/{id}/delete', 'DriverController@delete');
+
+// Multas de Choferes
+Route::get('/choferes/{id}/multas', 'TicketController@index');
+
+Route::get('/choferes/{id}/multas/create', 'TicketController@getCreate');
+Route::post('/choferes/{id}/multas/create', 'TicketController@postCreate');
+
+Route::get('/choferes/multas/{id}/edit', 'TicketController@edit');
+Route::post('/choferes/multas/{id}/edit', 'TicketController@update');
+
+Route::get('/choferes/multas/{id}/delete', 'TicketController@delete');

@@ -60,3 +60,12 @@ $factory->define(App\Driver::class, function (Faker\Generator $faker) {
         'observation' => $faker->realText(random_int(20, 200)),
     ];
 });
+
+$factory->define(App\Ticket::class, function (Faker\Generator $faker) {
+    return [
+        'number' => $faker->unique()->ean8,
+        'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'created_at' => $faker->dateTimeThisDecade,
+        'created_at' => $faker->dateTimeThisDecade,
+    ];
+});

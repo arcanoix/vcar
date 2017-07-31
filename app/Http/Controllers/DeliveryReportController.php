@@ -8,13 +8,11 @@ use Illuminate\Http\Request;
 
 class DeliveryReportController extends Controller
 {
-    public function index(DeliveryReport $deliveryReports)
+    public function index()
     {
         $deliveryReports = DeliveryReport::all();
 
-        return view('deliveryreports.index', [
-            'deliveryReports' => $deliveryReports,
-        ]);
+        return view('deliveryreports.index', compact('deliveryReports'));
     }
 
 

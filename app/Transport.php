@@ -3,13 +3,16 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\DeliveryReport;
 
 class Transport extends Model
 {
-    protected $guarded = [];
+  Protected $table = 'transports';
+  Protected $fillable = ['name','brand','model'];
+
 
     public function DeliveryReport()
     {
-        return $this->belongsTo('App\DeliveryReport');
+        return $this->belongsTo(DeliveryReport::class,'id');
     }
 }

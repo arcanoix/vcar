@@ -30,7 +30,7 @@
                                   <td>{{ $deliveryReport->id }}</td>
                                   <td>{{ $deliveryReport->departure_date }}</td>
                                   <td>{{ $deliveryReport->delivery_date }}</td>
-                                  <td>{{ $deliveryReport->transport_id }}</td>
+                                  <td>{{ $deliveryReport->transport->name }}</td>
                                   <td>{{ $deliveryReport->driver_id }}</td>
                                   <td>{{ $deliveryReport->client_id }}</td>
                                   {{-- <td>

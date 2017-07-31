@@ -3,13 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\DeliveryReport;
 
 class Client extends Model
 {
-    protected $guarded = [];
+    protected $table = 'clients';
+    protected $fillable = ['name'];
 
     public function DeliveryReport()
     {
-        return $this->belongsTo('App\DeliveryReport');
+        return $this->belongsTo(DeliveryReport::class, 'id');
     }
 }

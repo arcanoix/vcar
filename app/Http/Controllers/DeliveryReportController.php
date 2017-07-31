@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\DeliveryReport;
 use App\Transport;
+use App\Client;
+use App\Driver;
 use Illuminate\Http\Request;
 
 class DeliveryReportController extends Controller
@@ -28,25 +30,27 @@ class DeliveryReportController extends Controller
     }
 
 
-    public function show(Load $load)
+    public function show($id)
+    {
+        $deliveryReport = DeliveryReport::find($id);
+
+        return view('deliveryreports.show', compact('deliveryReport'));
+    }
+
+
+    public function edit()
     {
         //
     }
 
 
-    public function edit(Load $load)
+    public function update(Request $request)
     {
         //
     }
 
 
-    public function update(Request $request, Load $load)
-    {
-        //
-    }
-
-
-    public function destroy(Load $load)
+    public function destroy()
     {
         //
     }

@@ -16,23 +16,22 @@
                           <thead>
                             <tr>
                               <th>ID</th>
-                              <th>Fecha de salida</th>
-                              <th>Fecha de llegada</th>
+                              <th>Cliente</th>
                               <th>Trasporte</th>
                               <th>Chofer</th>
-                              <th>Cliente</th>
-
+                              <th>Fecha y hora de salida</th>
+                              <th>Fecha y hora de llegada</th>
                             </tr>
                           </thead>
                           <tbody>
                               @foreach ($deliveryReports as $deliveryReport)
                                 <tr>
-                                  <td>{{ $deliveryReport->id }}</td>
+                                  <td>{{ $deliveryReport->id }} <a href="/entregas/{{ $deliveryReport->id }}" class="badge badge-info">Ver</a></td>
+                                  <td><a href="/clientes/{{ $deliveryReport->client->id }}">{{ $deliveryReport->client->name }}</a></td>
+                                  <td><a href="/clientes/{{ $deliveryReport->transport->id }}">{{ $deliveryReport->transport->name }}</a></td>
+                                  <td><a href="/clientes/{{ $deliveryReport->driver->id }}">{{ $deliveryReport->driver->name }}</a></td>
                                   <td>{{ $deliveryReport->departure_date }}</td>
                                   <td>{{ $deliveryReport->delivery_date }}</td>
-                                  <td>{{ $deliveryReport->transport->name }}</td>
-                                  <td>{{ $deliveryReport->driver_id }}</td>
-                                  <td>{{ $deliveryReport->client_id }}</td>
                                   {{-- <td>
                                       <a href="" class="badge badge-default">Licencia</a>
                                       <a href="" class="badge badge-default">C. Médico</a>

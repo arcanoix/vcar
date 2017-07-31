@@ -1,14 +1,1 @@
-/* line 1, /Users/lramirez/_sites/vimocar/public/sass/app.scss */
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-}
-
-/* line 7, /Users/lramirez/_sites/vimocar/public/sass/app.scss */
-.login-register-form {
-  width: 100%;
-  height: 500px;
-}
-
-/*# sourceMappingURL=../css/app.map */
+body{padding-top:40px;padding-bottom:40px;background-color:#eee}.login-register-form{width:100%;height:500px}

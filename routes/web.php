@@ -22,6 +22,7 @@ Route::get('/dashboard', 'HomeController@index');
 
 //Clientes
 Route::get('/clientes', 'ClientsController@index');
+Route::get('/clientes/{id}', 'ClientsController@show');
 
 Route::get('/clientes/create', 'ClientsController@getCreate');
 Route::post('/clientes/create', 'ClientsController@postCreate');
@@ -33,6 +34,7 @@ Route::get('/clientes/{id}/delete', 'ClientsController@delete');
 
 //Transporte
 Route::get('/transportes', 'TransportController@index');
+Route::get('/transportes/{id}', 'TransportController@show');
 
 Route::get('/transportes/create', 'TransportController@getCreate');
 Route::post('/transportes/create', 'TransportController@postCreate');
@@ -44,6 +46,7 @@ Route::get('/transportes/{id}/delete', 'TransportController@delete');
 
 //Choferes
 Route::get('/choferes', 'DriverController@index');
+Route::get('/choferes/{id}', 'DriverController@show');
 
 Route::get('/choferes/create', 'DriverController@getCreate');
 Route::post('/choferes/create', 'DriverController@postCreate');
@@ -66,6 +69,7 @@ Route::get('/choferes/multas/{id}/delete', 'TicketController@delete');
 
 // Reportes de Entrega
 Route::get('/entregas', 'DeliveryReportController@index');
+Route::get('/entregas/{id}', 'DeliveryReportController@show');
 
 Route::get('/entregas/create', 'DeliveryReportController@getCreate');
 Route::post('/entregas/create', 'DeliveryReportController@postCreate');

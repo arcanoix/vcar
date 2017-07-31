@@ -2,17 +2,17 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use App\DeliveryReport;
+use Illuminate\Database\Eloquent\Model;
 
 class Transport extends Model
 {
-  Protected $table = 'transports';
-  Protected $fillable = ['name','brand','model'];
+    protected $table = 'transports';
+    protected $fillable = ['name','brand','model'];
 
 
     public function DeliveryReport()
     {
-        return $this->belongsTo(DeliveryReport::class,'id');
+        return $this->belongsTo(DeliveryReport::class, 'id');
     }
 }

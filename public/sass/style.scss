@@ -13,3 +13,29 @@
 #certificado .custom-file-control:lang(en)::before {
   content: "Buscar";
 }
+
+.card-title {
+    font-weight: 700;
+}
+.dr-card-dates {
+    & .card {
+        margin:0 2px;
+        width: 100%;
+    }
+    & .card-block {
+        padding: 10px;
+    }
+}
+
+.dr-destination{
+    margin: 15px 0;
+    & .dr-destino-title {
+        font-weight: 600;
+    }
+}
+
+.dr-cards-two {
+    & .card {
+        margin: 0 0 20px 0;
+    }
+}

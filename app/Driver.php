@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\DeliveryReport;
 
 class Driver extends Model
 {
-    protected $guarded = [];
+    protected $table = 'drivers';
+    protected $fillable = ['name', 'lastname', 'licence', 'medical_certificate', 'observation'];
 
     public function tickets()
     {
@@ -15,6 +17,6 @@ class Driver extends Model
 
     public function DeliveryReport()
     {
-        return $this->belongsTo('App\DeliveryReport');
+        return $this->belongsTo(DeliveryReport::class, 'id');
     }
 }

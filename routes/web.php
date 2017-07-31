@@ -63,3 +63,14 @@ Route::get('/choferes/multas/{id}/edit', 'TicketController@edit');
 Route::post('/choferes/multas/{id}/edit', 'TicketController@update');
 
 Route::get('/choferes/multas/{id}/delete', 'TicketController@delete');
+
+// Reportes de Entrega
+Route::get('/entregas', 'DeliveryReportController@index');
+
+Route::get('/entregas/create', 'DeliveryReportController@getCreate');
+Route::post('/entregas/create', 'DeliveryReportController@postCreate');
+
+Route::get('/entregas/{id}/edit', 'DeliveryReportController@edit');
+Route::post('/entregas/{id}/edit', 'DeliveryReportController@update');
+
+Route::get('/entregas/{id}/delete', 'DeliveryReportController@delete');

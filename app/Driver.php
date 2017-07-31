@@ -12,4 +12,9 @@ class Driver extends Model
     {
         return $this->hasMany('App\Ticket');
     }
+
+    public function DeliveryReport()
+    {
+        return $this->belongsTo('App\DeliveryReport');
+    }
 }

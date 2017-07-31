@@ -69,3 +69,19 @@ $factory->define(App\Ticket::class, function (Faker\Generator $faker) {
         'created_at' => $faker->dateTimeThisDecade,
     ];
 });
+
+$factory->define(App\DeliveryReport::class, function (Faker\Generator $faker) {
+    return [
+        'departure_date' => $faker->date($max = 'now'),
+        'delivery_date' => $faker->dateTimeBetween('now', '+1 day'),
+        'destination_state' => $faker->state,
+        'destination_city' => $faker->city,
+        'destination_address'  => $faker->address,
+        'load_type' => $faker->
+            randomElement($array = array('General', 'Granel', 'Peligrosa', 'Perecedera', 'Frágil')),
+        'condition' => $faker->randomElement($array = array('Condicion 1', 'Condicion 2')),
+        'transport_id' => random_int(1, 5),
+        'driver_id' => random_int(1, 10),
+        'client_id' => random_int(1, 20),
+    ];
+});

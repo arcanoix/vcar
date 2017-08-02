@@ -51,9 +51,11 @@ class TransportController extends Controller
 
 
 
-    public function show(Transport $transport)
+    public function show($id)
     {
-        //
+        $transport = Transport::find($id);
+
+        return view('transports.show', compact('transport'));
     }
 
 
@@ -94,7 +96,7 @@ class TransportController extends Controller
     public function delete($id)
     {
         // delete
-         $transport = Transport::find($id);
+        $transport = Transport::find($id);
         $transport->delete();
 
         return redirect('/transportes')->with('notification', 'Cliente eliminado correctamente');

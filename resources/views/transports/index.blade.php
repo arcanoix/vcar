@@ -5,12 +5,8 @@
         <div class="col-md-12">
             <div class="content-box-large">
                 <h1 class="page-header">Transportes</h1>
+                @include('layouts.admin.alerts')
                 <div class="panel-body">
-                    @if (session('notification'))
-                        <div class="alert alert-success">
-                            {{ session('notification') }}
-                        </div>
-                    @endif
                     @if (!$transports->isEmpty())
                         <table class="table table-bordered">
                           <thead>

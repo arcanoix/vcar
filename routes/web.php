@@ -12,69 +12,77 @@
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    return redirect('/login');
+    // return view('auth/login');
 });
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index');
 
+Route::group(['middleware' => ['auth']], function () {
+    // your routes
+    Route::get('/dashboard', 'HomeController@index');
 
-//Clientes
-Route::get('/clientes', 'ClientsController@index');
-Route::get('/clientes/{id}', 'ClientsController@show');
+    //Clientes
+    Route::get('/clientes', 'ClientsController@index');
 
-Route::get('/clientes/create', 'ClientsController@getCreate');
-Route::post('/clientes/create', 'ClientsController@postCreate');
+    Route::get('/clientes/create', 'ClientsController@getCreate');
+    Route::post('/clientes/create', 'ClientsController@postCreate');
 
-Route::get('/clientes/{id}/edit', 'ClientsController@edit');
-Route::post('/clientes/{id}/edit', 'ClientsController@update');
+    Route::get('/clientes/{id}', 'ClientsController@show');
 
-Route::get('/clientes/{id}/delete', 'ClientsController@delete');
+    Route::get('/clientes/{id}/edit', 'ClientsController@edit');
+    Route::post('/clientes/{id}/edit', 'ClientsController@update');
 
-//Transporte
-Route::get('/transportes', 'TransportController@index');
-Route::get('/transportes/{id}', 'TransportController@show');
+    Route::get('/clientes/{id}/delete', 'ClientsController@delete');
 
-Route::get('/transportes/create', 'TransportController@getCreate');
-Route::post('/transportes/create', 'TransportController@postCreate');
+    //Transporte
+    Route::get('/transportes', 'TransportController@index');
 
-Route::get('/transportes/{id}/edit', 'TransportController@edit');
-Route::post('/transportes/{id}/edit', 'TransportController@update');
+    Route::get('/transportes/create', 'TransportController@getCreate');
+    Route::post('/transportes/create', 'TransportController@postCreate');
 
-Route::get('/transportes/{id}/delete', 'TransportController@delete');
+    Route::get('/transportes/{id}', 'TransportController@show');
 
-//Choferes
-Route::get('/choferes', 'DriverController@index');
-Route::get('/choferes/{id}', 'DriverController@show');
+    Route::get('/transportes/{id}/edit', 'TransportController@edit');
+    Route::post('/transportes/{id}/edit', 'TransportController@update');
 
-Route::get('/choferes/create', 'DriverController@getCreate');
-Route::post('/choferes/create', 'DriverController@postCreate');
+    Route::get('/transportes/{id}/delete', 'TransportController@delete');
 
-Route::get('/choferes/{id}/edit', 'DriverController@edit');
-Route::post('/choferes/{id}/edit', 'DriverController@update');
+    //Choferes
+    Route::get('/choferes', 'DriverController@index');
 
-Route::get('/choferes/{id}/delete', 'DriverController@delete');
+    Route::get('/choferes/create', 'DriverController@getCreate');
+    Route::post('/choferes/create', 'DriverController@postCreate');
 
-// Multas de Choferes
-Route::get('/choferes/{id}/multas', 'TicketController@index');
+    Route::get('/choferes/{id}', 'DriverController@show');
 
-Route::get('/choferes/{id}/multas/create', 'TicketController@getCreate');
-Route::post('/choferes/{id}/multas/create', 'TicketController@postCreate');
+    Route::get('/choferes/{id}/edit', 'DriverController@edit');
+    Route::post('/choferes/{id}/edit', 'DriverController@update');
 
-Route::get('/choferes/multas/{id}/edit', 'TicketController@edit');
-Route::post('/choferes/multas/{id}/edit', 'TicketController@update');
+    Route::get('/choferes/{id}/delete', 'DriverController@delete');
 
-Route::get('/choferes/multas/{id}/delete', 'TicketController@delete');
+    // Multas de Choferes
+    Route::get('/choferes/{id}/multas', 'TicketController@index');
 
-// Reportes de Entrega
-Route::get('/entregas', 'DeliveryReportController@index');
-Route::get('/entregas/{id}', 'DeliveryReportController@show');
+    Route::get('/choferes/{id}/multas/create', 'TicketController@getCreate');
+    Route::post('/choferes/{id}/multas/create', 'TicketController@postCreate');
 
-Route::get('/entregas/create', 'DeliveryReportController@getCreate');
-Route::post('/entregas/create', 'DeliveryReportController@postCreate');
+    Route::get('/choferes/multas/{id}/edit', 'TicketController@edit');
+    Route::post('/choferes/multas/{id}/edit', 'TicketController@update');
 
-Route::get('/entregas/{id}/edit', 'DeliveryReportController@edit');
-Route::post('/entregas/{id}/edit', 'DeliveryReportController@update');
+    Route::get('/choferes/multas/{id}/delete', 'TicketController@delete');
 
-Route::get('/entregas/{id}/delete', 'DeliveryReportController@delete');
+    // Reportes de Entrega
+    Route::get('/entregas', 'DeliveryReportController@index');
+
+    Route::get('/entregas/create', 'DeliveryReportController@getCreate');
+    Route::post('/entregas/create', 'DeliveryReportController@postCreate');
+
+    Route::get('/entregas/{id}', 'DeliveryReportController@show');
+
+    Route::get('/entregas/{id}/edit', 'DeliveryReportController@edit');
+    Route::post('/entregas/{id}/edit', 'DeliveryReportController@update');
+
+    Route::get('/entregas/{id}/delete', 'DeliveryReportController@delete');
+});

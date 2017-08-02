@@ -50,9 +50,11 @@ class DriverController extends Controller
     }
 
 
-    public function show(Driver $driver)
+    public function show($id)
     {
-        //
+        $driver = Driver::find($id);
+
+        return view('drivers.show', compact('driver'));
     }
 
     public function edit($id)

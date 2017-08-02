@@ -37,6 +37,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Client::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->company,
+        'address' => $faker->address,
+        'state' => $faker->state,
+        'city' => $faker->city,
         'created_at' => $faker->dateTimeThisDecade,
     ];
 });
@@ -72,7 +75,7 @@ $factory->define(App\Ticket::class, function (Faker\Generator $faker) {
 
 $factory->define(App\DeliveryReport::class, function (Faker\Generator $faker) {
     return [
-        'departure_date' => $faker->date($max = 'now'),
+        'departure_date' => $faker->dateTimeBetween($startDate = '-1 day', $endDate = 'now'),
         'delivery_date' => $faker->dateTimeBetween('now', '+1 day'),
         'destination_state' => $faker->state,
         'destination_city' => $faker->city,

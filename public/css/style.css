@@ -1,1 +1,53 @@
-﻿#licencia .custom-file-control:lang(en)::after{content:"Seleccionar licencia"}#licencia .custom-file-control:lang(en)::before{content:"Buscar"}#certificado .custom-file-control:lang(en)::after{content:"Seleccionar certificado médico"}#certificado .custom-file-control:lang(en)::before{content:"Buscar"}.card-title{font-weight:700}.dr-card-dates .card{margin:0 2px;width:100%}.dr-card-dates .card-block{padding:10px}.dr-destination{margin:15px 0}.dr-destination .dr-destino-title{font-weight:600}.dr-cards-two .card{margin:0 0 20px 0}
+@charset "UTF-8";
+#licencia .custom-file-control:lang(en)::after {
+  content: "Seleccionar licencia"; }
+
+#licencia .custom-file-control:lang(en)::before {
+  content: "Buscar"; }
+
+#certificado .custom-file-control:lang(en)::after {
+  content: "Seleccionar certificado médico"; }
+
+#certificado .custom-file-control:lang(en)::before {
+  content: "Buscar"; }
+
+/* - General - */
+.title-after {
+  padding-bottom: 10px;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee; }
+
+.card {
+  margin-bottom: 20px; }
+
+.card-title {
+  font-weight: 700; }
+
+.dr-card-dates .card {
+  margin: 0 2px;
+  width: 100%; }
+
+.dr-card-dates .card-block {
+  padding: 10px; }
+
+.dr-destination {
+  margin: 15px 0; }
+  .dr-destination .dr-destino-title {
+    font-weight: 600; }
+
+/* - Datepicker -*/
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  width: 100%; }
+
+/* - select2 -*/
+.select2-container--default .select2-selection--single {
+  border: 1px solid rgba(0, 0, 0, 0.15) !important; }
+
+.select2-container .select2-selection--single {
+  height: 35px !important; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 35px; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 32px; }

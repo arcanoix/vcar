@@ -69,6 +69,7 @@ class DeliveryReportController extends Controller
         $deliveryReport->destination_address = $request->input('destination_address');
         $deliveryReport->load_type = $request->input('load_type');
         $deliveryReport->condition = $request->input('condition');
+        $deliveryReport->incident = $request->input('incident');
         $deliveryReport->transport_id = $request->input('transport_id');
         $deliveryReport->driver_id = $request->input('driver_id');
 
@@ -135,6 +136,7 @@ class DeliveryReportController extends Controller
         $deliveryReport->destination_address = $request->input('destination_address');
         $deliveryReport->load_type = $request->input('load_type');
         $deliveryReport->condition = $request->input('condition');
+        $deliveryReport->incident = $request->input('incident');
         $deliveryReport->transport_id = $request->input('transport_id');
         $deliveryReport->driver_id = $request->input('driver_id');
 

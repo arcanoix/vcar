@@ -134,6 +134,16 @@
         </div>
 
         <div class="col-md-12">
+            <div class="card">
+                <h4 class="card-header">Incidencia </h4>
+                <div class="card-block">
+                    <p>Detalle la incidencia..</p>
+                    <textarea name="incident" rows="8" cols="80" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
             <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
     </form>

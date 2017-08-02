@@ -22,6 +22,7 @@ class AddDeliveryReportTable extends Migration
             $table->string('destination_address');
             $table->string('load_type');
             $table->string('condition');
+            $table->text('incident');
             // transporte
             //chofer
             //cliente

@@ -9,7 +9,7 @@ use App\DeliveryReport;
 class DeliveryReport extends Model
 {
     protected $table ='delivery_reports';
-    protected $fillable = ['departure_date','delivery_date','destination_state','destination_city','destination_address','load_type','condition','transport_id', 'driver_id', 'client_id'];
+    protected $fillable = ['departure_date','delivery_date','destination_state','destination_city','destination_address','load_type','condition', 'incident', 'transport_id', 'driver_id', 'client_id'];
 
 
     public function transport()

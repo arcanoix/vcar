@@ -37,6 +37,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Client::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->company,
+        'email' => $faker->safeEmail,
+        'phone' => $faker->phoneNumber,
+        'cedula' => $faker->randomNumber($nbDigits = null, $strict = false),
         'address' => $faker->address,
         'state' => $faker->state,
         'city' => $faker->city,
@@ -83,6 +86,7 @@ $factory->define(App\DeliveryReport::class, function (Faker\Generator $faker) {
         'load_type' => $faker->
             randomElement($array = array('General', 'Granel', 'Peligrosa', 'Perecedera', 'Frágil')),
         'condition' => $faker->randomElement($array = array('Condicion 1', 'Condicion 2')),
+        'incident' => $faker->text($maxNbChars = 200),
         'transport_id' => random_int(1, 5),
         'driver_id' => random_int(1, 10),
         'client_id' => random_int(1, 20),

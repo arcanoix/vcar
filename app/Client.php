@@ -8,7 +8,7 @@ use App\DeliveryReport;
 class Client extends Model
 {
     protected $table = 'clients';
-    protected $fillable = ['name', 'address', 'state', 'city'];
+    protected $fillable = ['name', 'email', 'phone', 'id_card', 'address', 'state', 'city'];
 
     public function DeliveryReport()
     {

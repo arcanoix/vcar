@@ -33,7 +33,7 @@
                                     <label for="example-text-input" class="col-3 col-form-label">Fecha de Salida</label>
                                     <div class="col-9">
                                         <div class="input-group date" id="departure_date" data-target-input="nearest">
-                                           <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#departure_date" name="departure_date"/>
+                                           <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#departure_date" name="departure_date" value="{{ $deliveryReport->departure_date }}"/>
                                            <span class="input-group-addon" data-target="#departure_date" data-toggle="datetimepicker">
                                                <span class="fa fa-calendar"></span>
                                            </span>
@@ -46,7 +46,7 @@
                                     <label for="example-text-input" class="col-3 col-form-label">Fecha de Llegada</label>
                                     <div class="col-9">
                                         <div class="input-group date" id="delivery_date" data-target-input="nearest">
-                                           <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#delivery_date" name="delivery_date"/>
+                                           <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#delivery_date" name="delivery_date" value="{{ $deliveryReport->delivery_date }}"/>
                                            <span class="input-group-addon" data-target="#delivery_date" data-toggle="datetimepicker">
                                                <span class="fa fa-calendar"></span>
                                            </span>
@@ -137,6 +137,16 @@
         </div>
 
         <div class="col-md-12">
+            <div class="card">
+                <h4 class="card-header">Incidencia </h4>
+                <div class="card-block">
+                    <p>Detalle la incidencia..</p>
+                    <textarea name="incident" rows="8" cols="80" class="form-control"> {{ $deliveryReport->incident }}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
             <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
     </form>
@@ -150,7 +160,14 @@
     <script src="{{ asset('js/tempusdominus-bootstrap-4.min.js') }}"></script>
     <script type="text/javascript">
         $(function () {
-            $('.datetimepicker').datetimepicker();
+            $('#datetimepicker6').datetimepicker({
+                    defaultDate: "11/1/2013",
+                    // disabledDates: [
+                    //     moment("12/25/2013"),
+                    //     new Date(2013, 11 - 1, 21),
+                    //     "11/22/2013 00:53"
+                    // ]
+            });
         });
     </script>
     <script type="text/javascript">

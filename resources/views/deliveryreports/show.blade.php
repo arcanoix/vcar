@@ -88,9 +88,25 @@
                             </div>
 
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <h4 class="card-header">Incidencia</h4>
+                                    <div class="card-block">
+                                        <h6 class="card-title"></h6>
+                                        @if ($deliveryReport->incident)
+                                            <p>{{ $deliveryReport->incident }}</p>
+                                        @else
+                                            <div class="alert alert-warning">
+                                                No hubo incidencias.
+                                            </div>
+                                        @endif
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

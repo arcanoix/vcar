@@ -28,18 +28,6 @@ class DatabaseSeeder extends Seeder
 
         $delivery_report = factory(App\DeliveryReport::class)->times(5)->create();
 
-        // $delivery_report->each(function (App\DeliveryReport $dr) use ($dr) {
-        //     factory(App\Transport::class)->time(1)->create([
-        //         'transport_id' => $transport->id,
-        //     ]);
-        //
-        //     factory(App\Driver::class)->time(1)->create([
-        //         'driver_id' => $driver->id,
-        //     ]);
-        //
-        //     factory(App\Client::class)->time(1)->create([
-        //         'client_id' => $client->id,
-        //     ]);
-        // });
+        $maintenance = factory(App\Maintenance::class)->times(10)->create();
     }
 }

@@ -7,13 +7,16 @@
                 <h1 class="page-header">Clientes</h1>
                 @include('layouts.admin.alerts')
                 <div class="panel-body">
-                    
+
                     @if (!$clients->isEmpty())
                         <table class="table table-bordered">
                           <thead>
                             <tr>
                               <th>Fecha</th>
                               <th>Nombre</th>
+                              <th>E-mail</th>
+                              <th>Teléfono</th>
+                              <th>Cedula</th>
                               <th>Acciones</th>
                             </tr>
                           </thead>
@@ -22,6 +25,9 @@
                                 <tr>
                                   <td>{{ $client->created_at->format('d/m/Y') }}</td>
                                   <td>{{ $client->name }}</td>
+                                  <td>{{ $client->email }}</td>
+                                  <td>{{ $client->phone }}</td>
+                                  <td>{{ $client->cedula }}</td>
                                   <td>
                                       <a href="/clientes/{{ $client->id }}/edit" class="badge badge-info">Editar</a>
                                       <a href="/clientes/{{ $client->id }}/delete" class="badge badge-danger">Eliminar</a>

@@ -15,4 +15,8 @@ class Transport extends Model
     {
         return $this->belongsTo(DeliveryReport::class, 'id');
     }
+    public function maintenance()
+    {
+        return $this->belongsTo(Maintenance::class, 'id');
+    }
 }

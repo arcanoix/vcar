@@ -92,3 +92,16 @@ $factory->define(App\DeliveryReport::class, function (Faker\Generator $faker) {
         'client_id' => random_int(1, 20),
     ];
 });
+
+$factory->define(App\Maintenance::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->
+            randomElement($array = array('Cambio de Parte', 'Cambio de Aceite', 'Cambio de Llantas')),
+        'last_check' => $faker->dateTimeBetween($startDate = '-1 month', $endDate = 'now'),
+        'last_km' => $faker->randomNumber($nbDigits = 5, $strict = false),
+        'next_check' => $faker->dateTimeBetween($startDate = '+1 day', $endDate = '+5 month'),
+        'next_km' => $faker->randomNumber($nbDigits = 6, $strict = false),
+        'observation' => $faker->realText(random_int(20, 200)),
+        'transport_id' => random_int(1, 5),
+    ];
+});

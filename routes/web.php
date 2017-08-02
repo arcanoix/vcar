@@ -85,4 +85,17 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/entregas/{id}/edit', 'DeliveryReportController@update');
 
     Route::get('/entregas/{id}/delete', 'DeliveryReportController@delete');
+
+    // Reportes de Entrega
+    Route::get('/mantenimientos', 'MaintenanceController@index');
+
+    Route::get('/mantenimientos/create', 'MaintenanceController@getCreate');
+    Route::post('/mantenimientos/create', 'MaintenanceController@postCreate');
+
+    Route::get('/mantenimientos/{id}', 'MaintenanceController@show');
+
+    Route::get('/mantenimientos/{id}/edit', 'MaintenanceController@edit');
+    Route::post('/mantenimientos/{id}/edit', 'MaintenanceController@update');
+
+    Route::get('/mantenimientos/{id}/delete', 'MaintenanceController@delete');
 });

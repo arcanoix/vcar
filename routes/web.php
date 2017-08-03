@@ -19,7 +19,23 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['role:administrador']], function () {
+    // Creación de Usuarios
+    Route::get('/usuarios', 'UserController@index');
+
+    Route::get('/usuarios/create', 'UserController@getCreate');
+    Route::post('/usuarios/create', 'UserController@postCreate');
+
+    Route::get('/usuarios/{id}', 'UserController@show');
+
+    Route::get('/usuarios/{id}/edit', 'UserController@edit');
+    Route::post('/usuarios/{id}/edit', 'UserController@update');
+
+    Route::get('/usuarios/{id}/delete', 'UserController@delete');
+});
+
+
+Route::group(['middleware' => ['role:administrador|usuario']], function () {
     // your routes
     Route::get('/dashboard', 'HomeController@index');
 

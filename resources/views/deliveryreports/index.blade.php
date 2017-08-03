@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="content-box-large">
-                <h1 class="page-header">Seguimiento de Transportes</h1>
+                <h1 class="page-header">Seguimiento de Entregas</h1>
                 @include('layouts.admin.alerts')
                 <div class="panel-body">
 

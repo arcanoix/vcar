@@ -12,9 +12,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // crear clientes
+        $users = factory(App\User::class)->create();
+
+        $this->call(LaratrustSeeder::class);
+
         $clients = factory(App\Client::class)->times(20)->create();
 
-        $users = factory(App\User::class)->create();
 
         $transports = factory(App\Transport::class)->times(5)->create();
 

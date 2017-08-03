@@ -80,6 +80,18 @@
                       <a class="dropdown-item" href="/mantenimientos/create">Nueva mantenimiento</a>
                     </div>
                  </li>
+
+                 @role('administrador')
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuarios</a>
+                     <div class="dropdown-menu">
+                         <a class="dropdown-item" href="/usuarios">Todos los Usuarios</a>
+                         <a class="dropdown-item" href="/usuarios/create">Nueva Usuario</a>
+                     </div>
+                 </li>
+                 @endrole
+
+
           </ul>
         </nav>
 

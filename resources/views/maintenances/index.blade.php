@@ -13,7 +13,7 @@
                           <thead>
                             <tr>
                               <th>Nombre de Camion</th>
-                              <th>Mantenimiento</th>
+                              <th>Tipo de Mantenimiento</th>
                               <th>Última Revisión</th>
                               {{-- <th>Último Kilometraje</th> --}}
                               <th>Póxima Revisión</th>

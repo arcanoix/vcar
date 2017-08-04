@@ -44,6 +44,38 @@
     }
 }
 
+/* - Dashboard - */
+
+.indicators-dashboard {
+    margin-bottom: 25px;
+}
+
+.card-count {
+    font-size: 50px;
+    margin-bottom: -20px;
+    & small {
+        font-size: 14px;
+    }
+}
+.icon-card {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    & i {
+        font-size: 78px;
+    }
+}
+
+.card-table-dashboard {
+    & .card-block {
+        padding: 0;
+    }
+
+    & table {
+        margin-bottom: 0;
+    }
+}
+
 /* - Datepicker -*/
 .bootstrap-datetimepicker-widget.dropdown-menu  {
     width: 100%;

@@ -37,7 +37,7 @@ Route::group(['middleware' => ['role:administrador']], function () {
 
 Route::group(['middleware' => ['role:administrador|usuario']], function () {
     // your routes
-    Route::get('/dashboard', 'HomeController@index');
+    Route::get('/dashboard', 'DashboardController@index');
 
     //Clientes
     Route::get('/clientes', 'ClientsController@index');

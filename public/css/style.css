@@ -35,6 +35,29 @@
   .dr-destination .dr-destino-title {
     font-weight: 600; }
 
+/* - Dashboard - */
+.indicators-dashboard {
+  margin-bottom: 25px; }
+
+.card-count {
+  font-size: 50px;
+  margin-bottom: -20px; }
+  .card-count small {
+    font-size: 14px; }
+
+.icon-card {
+  position: absolute;
+  right: 5px;
+  bottom: 5px; }
+  .icon-card i {
+    font-size: 78px; }
+
+.card-table-dashboard .card-block {
+  padding: 0; }
+
+.card-table-dashboard table {
+  margin-bottom: 0; }
+
 /* - Datepicker -*/
 .bootstrap-datetimepicker-widget.dropdown-menu {
   width: 100%; }

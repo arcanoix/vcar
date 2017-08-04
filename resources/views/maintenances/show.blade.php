@@ -16,7 +16,7 @@
                                     <h6 class="card-title">Transporte</h6>
                                     <p class="card-text">{{ $maintenance->transport->name }}</p>
                                     <hr>
-                                    <h6 class="card-title">Nombre de Mantenimiento</h6>
+                                    <h6 class="card-title">Tipo de Mantenimiento</h6>
                                     <p class="card-text">{{ $maintenance->name }}</p>
                                     <hr>
                                     <h6 class="card-title">Información de Mantenimiento</h6>

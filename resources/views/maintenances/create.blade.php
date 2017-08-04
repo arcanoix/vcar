@@ -29,7 +29,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="example-text-input" class="col-3 col-form-label">Nombre de Mantenimiento</label>
+                                    <label for="example-text-input" class="col-3 col-form-label">Tipo de Mantenimiento</label>
                                     <div class="col-9">
                                         <input class="form-control" type="text" name="name" >
                                     </div>

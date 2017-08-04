@@ -70,6 +70,7 @@
                    <div class="dropdown-menu">
                      <a class="dropdown-item" href="/entregas">Entregas</a>
                      <a class="dropdown-item" href="/entregas/create">Nueva entrega</a>
+                     <a class="dropdown-item" href="/entregas/incidencias">Incidencias</a>
                    </div>
                 </li>
 

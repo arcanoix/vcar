@@ -92,6 +92,9 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     // Reportes de Entrega
     Route::get('/entregas', 'DeliveryReportController@index');
 
+    Route::get('/entregas/incidencias', 'DeliveryReportController@incident');
+    Route::get('/entregas/incidencias/pdf', 'PdfController@incidentPDF');
+
     Route::get('/entregas/create', 'DeliveryReportController@getCreate');
     Route::post('/entregas/create', 'DeliveryReportController@postCreate');
 
@@ -101,6 +104,7 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::post('/entregas/{id}/edit', 'DeliveryReportController@update');
 
     Route::get('/entregas/{id}/delete', 'DeliveryReportController@delete');
+
 
     // Reportes de Entrega
     Route::get('/mantenimientos', 'MaintenanceController@index');

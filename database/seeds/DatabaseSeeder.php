@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
-        $delivery_report = factory(App\DeliveryReport::class)->times(5)->create();
+        $delivery_report = factory(App\DeliveryReport::class)->times(20)->create();
 
         $maintenance = factory(App\Maintenance::class)->times(10)->create();
     }

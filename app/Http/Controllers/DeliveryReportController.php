@@ -6,6 +6,7 @@ use App\DeliveryReport;
 use App\Transport;
 use App\Client;
 use App\Driver;
+use PDF;
 use Illuminate\Http\Request;
 
 class DeliveryReportController extends Controller
@@ -154,4 +155,19 @@ class DeliveryReportController extends Controller
 
         return redirect('/entregas')->with('notification', 'Reporte de Entrega Eliminado');
     }
+
+    public function incident()
+    {
+        $deliveryReports = DeliveryReport::all();
+
+        return view('deliveryreports.incident.index', compact('deliveryReports'));
+    }
+
+    // public function incidentPDF()
+    // {
+    //     $deliveryReports = DeliveryReport::all();
+    //     $pdf = PDF::loadView('deliveryreports.incident.index', compact('deliveryReports'));
+    //
+    //     return $pdf->download('invoice.pdf');
+    // }
 }

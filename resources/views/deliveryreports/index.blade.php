@@ -2,14 +2,28 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
-            <div class="content-box-large">
-                <h1 class="page-header">Seguimiento de Entregas</h1>
-                @include('layouts.admin.alerts')
-                <div class="panel-body">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">Todos las Entregas</h5>
+            <nav class="breadcrumb">
+                <a class="breadcrumb__item" href="/">Dashboard</a>
+                <span class="breadcrumb__item active">Entregas</span></nav>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            @include('layouts.admin.alerts')
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Clientes</h6>
+                </div>
+                <div class="card__body">
                     @if (!$deliveryReports->isEmpty())
-                        <table class="table table-bordered">
+                        <table class="table table--responsive thead--default undefined">
                           <thead>
                             <tr>
                               <th>ID</th>
@@ -40,19 +54,18 @@
                           </tbody>
                         </table>
 
-                        {{-- <div class="col-12">
-                            <div class="mt-5 mb-5 mx-auto">
+                        <div class="col-12">
+                            <div class="mt--2">
                                 @if (count($deliveryReports))
                                     {{ $deliveryReports->links('pagination::bootstrap-4') }}
                                 @endif
                             </div>
-                        </div> --}}
+                        </div>
                     @else
                         <div class="alert alert-warning">
                             Por el momento aún no hay registro de choferes.
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>

@@ -1,18 +1,38 @@
 @extends('layouts.admin.layout')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12">
-            <div class="content-box-large">
-                <h1 class="page-header">Seguimiento de Incidencias</h1>
-                @include('layouts.admin.alerts')
-                <div class="panel-body">
-                    <div class="text-right">
-                        <a href="/entregas/incidencias/pdf" target="_blank" class="btn btn-primary mb-2">PDF</a>
-                    </div>
 
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-10 col-lg-10 col-xl-10">
+            <h5 class="breadcrumb__title">Seguimiento de Incidencias</h5>
+            <nav class="breadcrumb">
+                <a class="breadcrumb__item" href="/">Dashboard</a>
+                <a class="breadcrumb__item" href="/entregas">Entregas</a>
+                <span class="breadcrumb__item active">Incidencias</span></nav>
+
+
+        </div>
+        <div class="col-xs col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <div class="right__content mt--3 text-right">
+                <a href="/entregas/incidencias/pdf" class="btn btn--primary btn--outline btn--sm btn--round">PDF</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            @include('layouts.admin.alerts')
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card__heading">Incidencias</div>
+                <div class="card__body">
                     @if (!$deliveryReports->isEmpty())
-                        <table class="table table-bordered">
+                        <table class="table table--responsive thead--default undefined">
                           <thead>
                             <tr>
                               <th>ID</th>
@@ -57,9 +77,12 @@
                             Por el momento aún no hay registro de choferes.
                         </div>
                     @endif
-
                 </div>
             </div>
+
         </div>
     </div>
+
+
+
 @endsection

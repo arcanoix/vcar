@@ -1,60 +1,88 @@
 @extends('layouts.admin.layout')
 
 @section('content')
-    <h1 class="page-header">Dashboard</h1>
-    <div class="row indicators-dashboard">
-        <div class="col-md-3">
-            <div class="card card-inverse card-primary mb-3">
-                <div class="card-block">
-                    <div class="card-count">{{ $countClients }}</div>
-                    <div><small>Clientes</small></div>
-                </div>
-                <div class="icon-card">
-                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    <div class="row">
+        <div class="dashboard__tools">
+            <div class="left__content">
+                <h5 class="content__title">Dashboard</h5>
+                <p class="content__desc">Bienvenido, {{ Auth::user()->name }}</p>
+            </div>
+            {{-- <div class="right__content">
+                <a class="btn btn--primary btn--outline btn--sm btn--round mr--2" type="button">Edit</a>
+                <a class="btn btn--primary btn--outline btn--sm btn--round" type="button">Update Dashboard</a>
+            </div> --}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-3 mt--3">
+            <div class="card stats__widget card--primary">
+                <div class="card__body">
+                    <div class="content__body">
+                        <div class="content__left">
+                            <h5 class="left__title">{{ $countClients }}</h5>
+                            <p class="left__desc">Clientes</p>
+                        </div>
+                        <div class="content__right"><i class="fa fa-users icon--stats"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card card-inverse card-success mb-3">
-                <div class="card-block">
-                    <div class="card-count">{{ $countTransports }}</div>
-                    <div><small>Transportes</small></div>
-                </div>
-                <div class="icon-card">
-                    <i class="fa fa-truck" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card card-inverse card-warning mb-3">
-                <div class="card-block">
-                    <div class="card-count">{{ $countDrivers }}</div>
-                    <div><small>Choferes</small></div>
-                </div>
-                <div class="icon-card">
-                    <i class="fa fa-id-card" aria-hidden="true"></i>
+
+        <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-3 mt--3">
+            <div class="card stats__widget">
+                <div class="card__body">
+                    <div class="content__body">
+                        <div class="content__left">
+                            <h5 class="left__title">{{ $countTransports }}</h5>
+                            <p class="left__desc">Transportes</p>
+                        </div>
+                        <div class="content__right"><i class="fa fa-truck icon--stats"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card card-inverse card-danger mb-3">
-                <div class="card-block">
-                    <div class="card-count">{{ $countdeliveryReports }}</div>
-                    <div><small>Entregas</small></div>
+
+        <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-3 mt--3">
+            <div class="card stats__widget">
+                <div class="card__body">
+                    <div class="content__body">
+                        <div class="content__left">
+                            <h5 class="left__title">{{ $countDrivers }}</h5>
+                            <p class="left__desc">Choferes</p>
+                        </div>
+                        <div class="content__right"><i class="fa fa-id-card icon--stats"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon-card">
-                    <i class="fa fa-paper-plane-o " aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-3 mt--3">
+            <div class="card stats__widget">
+                <div class="card__body">
+                    <div class="content__body">
+                        <div class="content__left">
+                            <h5 class="left__title">{{ $countdeliveryReports }}</h5>
+                            <p class="left__desc">Entregas</p>
+                        </div>
+                        <div class="content__right"><i class="fa fa-paper-plane-o  icon--stats"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-md-12">
-            <div class="card card-table-dashboard">
-                <h4 class="card-header">Últimas Entregas</h4>
-                <div class="card-block">
-                    <table class="table table-bordered table-striped table-sm">
+        <!-- Table last delivery-->
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Últimas Entregas</h6>
+                </div>
+                <div class="card__body">
+                    <table class="table table--responsive thead--default undefined">
                         <thead>
                             <tr>
                                 <th>No.</th>
@@ -71,25 +99,28 @@
                                     <td>{{ $lastDeliveryReport->client->name }}</a></td>
                                     <td>{{ $lastDeliveryReport->departure_date }}</td>
                                     <td>{{ $lastDeliveryReport->delivery_date }}</td>
-                                    <td class="text-center"><a href="/entregas/{{ $lastDeliveryReport->id }}" class="badge badge-success">Ver Entrega</a></td>
+                                    <td class="text-center"><a href="/entregas/{{ $lastDeliveryReport->id }}" class="badge badge-success">Ver entrega</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="card-footer">
-                    <a href="/entregas" class="badge badge-primary">Ver todas las entregas</a>
+                <div class="card__footer">
+                    <a href="/entregas" class="badge badge--info">Todas las entregas</a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-6">
-            <div class="card card-table-dashboard">
-                <h4 class="card-header">Últimos Clientes</h4>
-                <div class="card-block">
-                    <table class="table table-bordered table-striped table-sm">
+        <!-- Table last clients -->
+        <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Últimos Clientes</h6>
+                </div>
+                <div class="card__body">
+                    <table class="table table--responsive thead--default undefined">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -106,20 +137,24 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="card-footer">
-                    <a href="/clientes" class="badge badge-primary">Ver todos los clientes</a>
+                <div class="card__footer">
+                    <a href="/clientes" class="badge badge--info">Todos los clientes</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card card-table-dashboard">
-                <h4 class="card-header">Últimos Mantenimientos</h4>
-                <div class="card-block">
-                    <table class="table table-bordered table-striped table-sm">
+
+        <!-- Table last maintenances -->
+        <div class="col-xs col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Últimos Mantenimientos</h6>
+                </div>
+                <div class="card__body">
+                    <table class="table table--responsive thead--default undefined">
                         <thead>
                             <tr>
                                 <th>Transporte</th>
-                                <th>Tipo Mant.</th>
+                                {{-- <th>Tipo Mant.</th> --}}
                                 <th>Próx. Rev.</th>
                                 <th>Acciones</th>
                             </tr>
@@ -128,7 +163,7 @@
                             @foreach ($lastMaintenances as $lastMaintenance)
                                 <tr>
                                     <td>{{ $lastMaintenance->transport->name }} </td>
-                                    <td>{{ $lastMaintenance->name }}</a></td>
+                                    {{-- <td>{{ $lastMaintenance->name }}</a></td> --}}
                                     <td>{{ $lastMaintenance->next_check }}</td>
                                     <td><a href="/mantenimiento/{{ $lastMaintenance->id }}" class="badge badge-success">Ver mantenimiento</a> </td>
                                 </tr>
@@ -136,8 +171,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="card-footer">
-                    <a href="/mantenimientos" class="badge badge-primary">Ver todos los mantenimientos</a>
+                <div class="card__footer">
+                    <a href="/mantenimientos" class="badge badge--info">Todos los mantenimientos</a>
                 </div>
             </div>
         </div>

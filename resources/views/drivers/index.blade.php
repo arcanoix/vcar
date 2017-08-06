@@ -1,15 +1,31 @@
 @extends('layouts.admin.layout')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12">
-            <div class="content-box-large">
-                <h1 class="page-header">Choferes</h1>
-                @include('layouts.admin.alerts')
-                <div class="panel-body">
 
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">Todos los Choferes</h5>
+            <nav class="breadcrumb">
+                <a class="breadcrumb__item" href="/">Dashboard</a>
+                <span class="breadcrumb__item active">Choferes</span></nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            @include('layouts.admin.alerts')
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Choferes</h6>
+                </div>
+                <div class="card__body">
                     @if (!$drivers->isEmpty())
-                        <table class="table table-bordered">
+                        <table class="table table--responsive thead--default undefined">
                           <thead>
                             <tr>
                               <th>Nombre</th>
@@ -26,18 +42,18 @@
                                   <td>{{ $driver->name }}</td>
                                   <td>{{ $driver->lastname }}</td>
                                   <td>
-                                      <a href="" class="badge badge-default">Licencia</a>
-                                      <a href="" class="badge badge-default">C. Médico</a>
+                                      <a href="" class="badge badge--default">Licencia</a>
+                                      <a href="" class="badge badge--default">C. Médico</a>
                                   </td>
                                   <td>
-                                      <a href="/choferes/{{ $driver->id }}/multas" class="badge badge-primary">Ver multas</a>
-                                      <a href="/choferes/{{ $driver->id }}/multas/create" class="badge badge-success">Añadir Multa</a>
+                                      <a href="/choferes/{{ $driver->id }}/multas" class="badge badge--primary">Ver multas</a>
+                                      <a href="/choferes/{{ $driver->id }}/multas/create" class="badge badge--success">Añadir Multa</a>
                                   </td>
                                   {{-- <td>{{ $driver->observation }}</td> --}}
                                   <td>
-                                      <a href="/choferes/{{ $driver->id}}/perfil" class="badge badge-default">Ver Perfil</a>
-                                      <a href="/choferes/{{ $driver->id }}/edit" class="badge badge-info">Editar</a>
-                                      <a href="/choferes/{{ $driver->id }}/delete" class="badge badge-danger">Eliminar</a>
+                                      <a href="/choferes/{{ $driver->id}}/{id}" class="badge badge--default">Ver Perfil</a>
+                                      <a href="/choferes/{{ $driver->id }}/edit" class="badge badge--info">Editar</a>
+                                      <a href="/choferes/{{ $driver->id }}/delete" class="badge badge--danger">Eliminar</a>
                                   </td>
                                 </tr>
                                 @endforeach
@@ -52,13 +68,13 @@
                             </div>
                         </div>
                     @else
-                        <div class="alert alert-warning">
+                        <div class="alert alert--warning">
                             Por el momento aún no hay registro de choferes.
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>
     </div>
+
 @endsection

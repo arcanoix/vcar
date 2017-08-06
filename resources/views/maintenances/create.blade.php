@@ -4,113 +4,126 @@
 @endsection
 @section('content')
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-header">Alta de Mantenimiento</h1>
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">Alta de Mantenimiento</h5>
+            <nav class="breadcrumb">
+                <a class="breadcrumb__item" href="/">Dashboard</a>
+                <a class="breadcrumb__item" href="/mantenimientos">Mantenimientos</a>
+                <span class="breadcrumb__item active">Alta de Mantenimiento</span></nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
             @include('layouts.admin.alerts')
         </div>
+    </div>
 
-        <div class="col-md-6">
-            <div class="content-box-large">
-                <div class="panel-body">
-                    <form class="form-horizontal" action="" method="post">
-                        {{ csrf_field() }}
-                        <div class="card">
-                            <h4 class="card-header">Información General </h4>
-                            <div class="card-block">
-                                <div class="form-group row">
-                                    <label for="example-text-input" class="col-3 col-form-label">Transporte</label>
-                                    <div class="col-9">
-                                        <select class="js-example-basic-single form-control" name="transport_id">
-                                            @foreach ($transportSelects as $transportSelect)
-                                                <option value="{{ $transportSelect->id }}">{{ $transportSelect->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="example-text-input" class="col-3 col-form-label">Tipo de Mantenimiento</label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="text" name="name" >
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="example-text-input" class="col-3 col-form-label">Fecha de Mantenimiento</label>
-                                    <div class="col-9">
-                                        <div class="input-group date datetimepicker" id="last_check" data-target-input="nearest">
-                                           <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#last_check" name="last_check"/>
-                                           <span class="input-group-addon" data-target="#last_check" data-toggle="datetimepicker">
-                                               <span class="fa fa-calendar"></span>
-                                           </span>
-                                       </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="example-text-input" class="col-3 col-form-label">KM en mantenimiento</label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="text" name="last_km" >
-                                    </div>
-                                </div>
-
+    <form class="form-horizontal" action="" method="post">
+        {{ csrf_field() }}
+        <div class="row">
+            <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                <div class="card">
+                    <div class="card__heading">
+                        <h6 class="card__title">Información General</h6>
+                    </div>
+                    <div class="card__body">
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-3 col-form-label">Transporte</label>
+                            <div class="col-9">
+                                <select class="js-example-basic-single form-control" name="transport_id">
+                                    @foreach ($transportSelects as $transportSelect)
+                                        <option value="{{ $transportSelect->id }}">{{ $transportSelect->name }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-3 col-form-label">Tipo de Mantenimiento</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="name" >
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-3 col-form-label">Fecha de Mantenimiento</label>
+                            <div class="col-9">
+                                <div class="input-group date datetimepicker" id="last_check" data-target-input="nearest">
+                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#last_check" name="last_check"/>
+                                   <span class="input-group-addon" data-target="#last_check" data-toggle="datetimepicker">
+                                       <span class="fa fa-calendar"></span>
+                                   </span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-3 col-form-label">KM en mantenimiento</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="last_km" >
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-6">
-            <div class="card">
-                <h4 class="card-header">Información Furuta</h4>
-                <div class="card-block">
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-3 col-form-label">Próxima Revision</label>
-                        <div class="col-9">
-                            <div class="input-group date datetimepicker" id="next_check" data-target-input="nearest">
-                               <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#next_check" name="next_check"/>
-                               <span class="input-group-addon" data-target="#next_check" data-toggle="datetimepicker">
-                                   <span class="fa fa-calendar"></span>
-                               </span>
-                           </div>
+            <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                <div class="card">
+                    <div class="card__heading">
+                        <h6 class="card__title">Información Futura</h6>
+                    </div>
+                    <div class="card__body">
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-3 col-form-label">Próxima Revision</label>
+                            <div class="col-9">
+                                <div class="input-group date datetimepicker" id="next_check" data-target-input="nearest">
+                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#next_check" name="next_check"/>
+                                   <span class="input-group-addon" data-target="#next_check" data-toggle="datetimepicker">
+                                       <span class="fa fa-calendar"></span>
+                                   </span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-3 col-form-label">KM Próxima revisión</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="next_km" >
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-3 col-form-label">KM Próxima revisión</label>
-                        <div class="col-9">
-                            <input class="form-control" type="text" name="next_km" >
-                        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card__heading">
+                        <h6 class="card__title">Observación</h6>
+                    </div>
+
+                    <div class="card__body">
+                        <textarea name="observation" rows="8" cols="80" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
-        <div class="col-md-12">
-            <div class="card">
-                <h4 class="card-header">Observación </h4>
-                <div class="card-block">
-                    <textarea name="observation" rows="8" cols="80" class="form-control"></textarea>
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn--primary">Guardar</button>
             </div>
-        </div>
-
-        <div class="col-md-12">
-            <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
     </form>
-
-    </div>
-
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/moment.js') }}"></script>
-    <script src="{{ asset('js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('js/vendors/moment.js') }}"></script>
+    <script src="{{ asset('js/vendors/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $('.datetimepicker').datetimepicker({

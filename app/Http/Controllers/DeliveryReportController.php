@@ -13,7 +13,7 @@ class DeliveryReportController extends Controller
 {
     public function index()
     {
-        $deliveryReports = DeliveryReport::all();
+        $deliveryReports = DeliveryReport::latest()->paginate(10);
 
         return view('deliveryreports.index', compact('deliveryReports'));
     }

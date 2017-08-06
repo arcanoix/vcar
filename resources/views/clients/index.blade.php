@@ -2,14 +2,29 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
-            <div class="content-box-large">
-                <h1 class="page-header">Clientes</h1>
-                @include('layouts.admin.alerts')
-                <div class="panel-body">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">Todos los Clientes</h5>
+            <nav class="breadcrumb">
+                <a class="breadcrumb__item" href="/">Dashboard</a>
+                <span class="breadcrumb__item active">Clientes</span></nav>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            @include('layouts.admin.alerts')
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Clientes</h6>
+                </div>
+                <div class="card__body">
                     @if (!$clients->isEmpty())
-                        <table class="table table-bordered">
+                        <table class="table table--responsive thead--default undefined">
                           <thead>
                             <tr>
                               <th>Fecha</th>
@@ -29,8 +44,9 @@
                                   <td>{{ $client->phone }}</td>
                                   <td>{{ $client->cedula }}</td>
                                   <td>
-                                      <a href="/clientes/{{ $client->id }}/edit" class="badge badge-info">Editar</a>
-                                      <a href="/clientes/{{ $client->id }}/delete" class="badge badge-danger">Eliminar</a>
+                                      <a href="/clientes/{{ $client->id }}" class="badge badge--success">Perfil</a>
+                                      <a href="/clientes/{{ $client->id }}/edit" class="badge badge--info">Editar</a>
+                                      <a href="/clientes/{{ $client->id }}/delete" class="badge badge--danger">Eliminar</a>
                                   </td>
                                 </tr>
                             @endforeach
@@ -38,7 +54,7 @@
                         </table>
 
                         <div class="col-12">
-                            <div class="mt-5 mb-5 mx-auto">
+                            <div class="mt--4">
                                 @if (count($clients))
                                     {{ $clients->links('pagination::bootstrap-4') }}
                                 @endif
@@ -49,7 +65,6 @@
                             Por el momento aún no hay registro de clientes.
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
                     <h1 class="display-1 mb-5">Error 403</h1>
                     <h3 class="">Lo sentimos, no tienes suficientes permisos para esta area del sistema.</h3>
                     <p class="text-muted">Para tener los permisos suficientes, puedes contactar a un Administrador.</p>
-                    <a href="/" class="btn btn-secondary">Regresar al Inicio</a>
+                    <a href="/" class="btn btn--info">Regresar al Inicio</a>
                 </div>
             </div>
         </div>

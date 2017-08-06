@@ -2,14 +2,29 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
-            <div class="content-box-large">
-                <h1 class="page-header">Clientes</h1>
-                @include('layouts.admin.alerts')
-                <div class="panel-body">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h5 class="breadcrumb__title">Todos los Usuarios</h5>
+            <nav class="breadcrumb">
+                <a class="breadcrumb__item" href="/">Dashboard</a>
+                <span class="breadcrumb__item active">Usuarios</span></nav>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            @include('layouts.admin.alerts')
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card__heading">
+                    <h6 class="card__title">Clientes</h6>
+                </div>
+                <div class="card__body">
                     @if (!$users->isEmpty())
-                        <table class="table table-bordered">
+                        <table class="table table--responsive thead--default undefined">
                           <thead>
                             <tr>
                               <th>Nombre</th>
@@ -54,7 +69,6 @@
                             Por el momento aún no hay registro de clientes.
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>

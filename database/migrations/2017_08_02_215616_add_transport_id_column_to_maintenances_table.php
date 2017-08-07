@@ -15,7 +15,7 @@ class AddTransportIdColumnToMaintenancesTable extends Migration
     {
         Schema::table('maintenances', function (Blueprint $table) {
             $table->integer('transport_id')->unsigned();
-            $table->foreign('transport_id')->references('id')->on('transports');
+            $table->foreign('transport_id')->references('id')->on('transports')->onDelete('cascade');
         });
     }
 

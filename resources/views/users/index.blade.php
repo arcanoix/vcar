@@ -20,7 +20,7 @@
         <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="card">
                 <div class="card__heading">
-                    <h6 class="card__title">Clientes</h6>
+                    <h6 class="card__title">Usuarios</h6>
                 </div>
                 <div class="card__body">
                     @if (!$users->isEmpty())

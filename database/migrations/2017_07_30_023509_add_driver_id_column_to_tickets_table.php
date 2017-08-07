@@ -16,7 +16,7 @@ class AddDriverIdColumnToTicketsTable extends Migration
         Schema::table('tickets', function (Blueprint $table) {
             $table->integer('driver_id')->unsigned();
 
-            $table->foreign('driver_id')->references('id')->on('drivers');
+            $table->foreign('driver_id')->references('id')->on('drivers')->onDelete('cascade');
         });
     }
 

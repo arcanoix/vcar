@@ -182,7 +182,7 @@ return [
         */
         Laratrust\LaratrustServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-
+Spatie\Activitylog\ActivitylogServiceProvider::class,
     ],
 
     /*

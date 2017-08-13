@@ -50,6 +50,24 @@
                                 <input class="form__control" type="text" name="cedula">
                             </div>
                         </div>
+                        <div class="form__group row">
+                            <label for="example-text-input" class="col-2 col__form__label">Direción</label>
+                            <div class="col-10">
+                                <input class="form__control" type="text" name="address">
+                            </div>
+                        </div>
+                        <div class="form__group row">
+                            <label for="example-text-input" class="col-2 col__form__label">Estado</label>
+                            <div class="col-10">
+                                <input class="form__control" type="text" name="state">
+                            </div>
+                        </div>
+                        <div class="form__group row">
+                            <label for="example-text-input" class="col-2 col__form__label">Ciudad</label>
+                            <div class="col-10">
+                                <input class="form__control" type="text" name="city">
+                            </div>
+                        </div>
                         <button class="btn btn--primary" type="submit">Guardar</button>
 
                     </form>

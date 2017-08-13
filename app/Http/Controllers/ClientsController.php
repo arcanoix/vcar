@@ -28,16 +28,34 @@ class ClientsController extends Controller
     {
         $rules = [
             'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'cedula' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
         ];
 
         $messages = [
             'name.required' => 'Necesitas ingresar el nombre del cliente',
+            'email.required' => 'Necesitas ingresar el correo electrónico del cliente',
+            'phone.required' => 'Necesitas ingresar el teléfono del cliente',
+            'cedula.required' => 'Necesitas ingresar la cedula del cliente',
+            'address.required' => 'Necesitas ingresar la direción del cliente',
+            'city.required' => 'Necesitas ingresar la cedula del cliente',
+            'state.required' => 'Necesitas ingresar la cedula del cliente',
         ];
 
         $this->validate($request, $rules, $messages);
 
         $client = new Client();
         $client->name = $request->input('name');
+        $client->email = $request->input('email');
+        $client->phone = $request->input('phone');
+        $client->cedula = $request->input('cedula');
+        $client->address = $request->input('address');
+        $client->state = $request->input('state');
+        $client->city = $request->input('city');
 
         $client->save();
 

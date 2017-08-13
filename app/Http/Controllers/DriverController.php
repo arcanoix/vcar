@@ -37,12 +37,31 @@ class DriverController extends Controller
 
         $this->validate($request, $rules, $messages);
 
+
+
         $driver = new Driver();
         $driver->name = $request->input('name');
         $driver->lastname = $request->input('lastname');
-        $driver->licence = $request->input('licence');
-        $driver->medical_certificate = $request->input('medical_certificate');
         $driver->observation = $request->input('observation');
+
+        //
+        $fileLicence = strtolower($driver->name) . '_' . strtolower($driver->lastname) . '_' . 'licencia.pdf';
+        $request->file('licence')->move(
+            base_path() . '/public/uploads/licences',
+            $fileLicence
+        );
+
+        $driver->licence = $fileLicence;
+        //
+
+        $fileCertificate = strtolower($driver->name) . '_' . strtolower($driver->lastname) . '_' . 'certificado.pdf';
+        $request->file('medical_certificate')->move(
+            base_path() . '/public/uploads/certificates',
+            $fileCertificate
+        );
+
+        $driver->medical_certificate = $fileCertificate;
+
 
         $driver->save();
 

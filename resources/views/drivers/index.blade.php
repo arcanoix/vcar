@@ -42,8 +42,16 @@
                                   <td>{{ $driver->name }}</td>
                                   <td>{{ $driver->lastname }}</td>
                                   <td>
-                                      <a href="" class="badge badge--default">Licencia</a>
-                                      <a href="" class="badge badge--default">C. Médico</a>
+                                      @if ($driver->licence)
+                                          <a href="{{ asset('uploads/licences/'.$driver->licence) }}" class="badge badge--default">Licencia</a>
+                                      @else
+                                            <span class="badge badge--danger">Falta Licencia</span>
+                                      @endif
+                                      @if ($driver->medical_certificate)
+                                          <a href="{{ asset('uploads/certificates/'.$driver->medical_certificate) }}" class="badge badge--default">C. Médico</a>
+                                      @else
+                                          <span class="badge badge--danger">Falta C. Médico</span>
+                                      @endif
                                   </td>
                                   <td>
                                       <a href="/choferes/{{ $driver->id }}/multas" class="badge badge--primary">Ver multas</a>

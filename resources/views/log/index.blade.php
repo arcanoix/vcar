@@ -55,7 +55,7 @@
                         </div>
                     @else
                         <div class="alert alert--warning">
-                            Por el momento aún no hay registro de choferes.
+                            Por el momento aún no hay registro del sistema.
                         </div>
                     @endif
                 </div>

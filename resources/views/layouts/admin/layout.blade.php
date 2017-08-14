@@ -192,6 +192,13 @@
                               </li>
                           </ul>
                       </li>
+                      <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse {{ Request::is('usuarios*') ? 'active' : '' }}" href="#"><i class="link__icon fa fa-magic"></i><span class="link__name">Log</span></a>
+                          <ul class="sidebar__submenu dropdown--collapse">
+                              <li class="sidebar__item"><a class="sidebar__link" href="/log">Registros</a>
+                              </li>
+
+                          </ul>
+                      </li>
                      @endrole
 
                   </ul>

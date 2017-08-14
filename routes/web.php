@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return redirect('/login');
     // return view('auth/login');
@@ -118,4 +119,7 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::post('/mantenimientos/{id}/edit', 'MaintenanceController@update');
 
     Route::get('/mantenimientos/{id}/delete', 'MaintenanceController@delete');
+
+    //log
+    Route::get('/log','LogController@index');
 });

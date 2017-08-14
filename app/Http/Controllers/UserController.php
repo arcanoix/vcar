@@ -50,8 +50,8 @@ class UserController extends Controller
         $user->password = Hash::make($request->input('password'));
         $user->save();
 
-        activity()->log('Se ha creado un usuario nuevo');
-        
+        //activity()->log('Se ha creado un usuario nuevo');
+
         $user->roles()->attach((2));
 
         return redirect('/usuarios')->with('notification', 'Cliente registrado correctamente');

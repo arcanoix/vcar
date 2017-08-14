@@ -32,7 +32,7 @@
                       </div>
                   </div>
               </div>
-              <div class="header__brand"><a class="brand__link" href="index.html">
+              <div class="header__brand"><a class="brand__link" href="#">
                   {{-- <img class="brand__img" src="img/logo.png" alt="">
                   <img class="brand__img--mobile" src="img/logo-m.png" alt=""> --}}
                   <span class="brand__name">Vimocar</span></a></div>

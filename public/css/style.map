@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"#licencia .custom-file-control:lang(en)::after {\n  content: \"Seleccionar licencia\";\n}\n\n#licencia .custom-file-control:lang(en)::before {\n  content: \"Buscar\";\n}\n\n#certificado .custom-file-control:lang(en)::after {\n  content: \"Seleccionar certificado médico\";\n}\n\n#certificado .custom-file-control:lang(en)::before {\n  content: \"Buscar\";\n}\n\n.dr-card-dates {\n\n}\n"
+	],
+	"mappings": ";;AAAA,AAAuC,SAA9B,CAAC,oBAAoB,AAAA,KAAM,CAAA,AAAA,EAAE,CAAC,OAAO,CAAC;EAC7C,OAAO,EAAE,sBAAuB;CACjC;;;AAED,AAAuC,SAA9B,CAAC,oBAAoB,AAAA,KAAM,CAAA,AAAA,EAAE,CAAC,QAAQ,CAAC;EAC9C,OAAO,EAAE,QAAS;CACnB;;;AAED,AAA0C,YAA9B,CAAC,oBAAoB,AAAA,KAAM,CAAA,AAAA,EAAE,CAAC,OAAO,CAAC;EAChD,OAAO,EAAE,iCAAkC;CAC5C;;;AAED,AAA0C,YAA9B,CAAC,oBAAoB,AAAA,KAAM,CAAA,AAAA,EAAE,CAAC,QAAQ,CAAC;EACjD,OAAO,EAAE,QAAS;CACnB",
+	"names": []
+}

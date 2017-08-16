@@ -182,7 +182,8 @@ return [
         */
         Laratrust\LaratrustServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-Spatie\Activitylog\ActivitylogServiceProvider::class,
+        Spatie\Activitylog\ActivitylogServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
     ],
 
     /*
@@ -236,6 +237,7 @@ Spatie\Activitylog\ActivitylogServiceProvider::class,
         */
         'Laratrust'   => Laratrust\LaratrustFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
 
     ],
 

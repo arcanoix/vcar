@@ -20,6 +20,8 @@ class AddDeliveryReportTable extends Migration
             $table->string('destination_state');
             $table->string('destination_city');
             $table->string('destination_address');
+            $table->string('lat')->nullable();
+            $table->string('lng')->nullable();
             $table->string('load_type');
             $table->string('condition');
             $table->text('incident');

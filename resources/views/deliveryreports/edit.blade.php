@@ -71,37 +71,6 @@
             <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                 <div class="card">
                     <div class="card__heading">
-                        <h6 class="card__title">Información Destino</h6>
-                    </div>
-                    <div class="card__body">
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Estado</label>
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="destination_state" value="{{ $deliveryReport->destination_state }}" >
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Ciudad</label>
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="destination_city" value="{{ $deliveryReport->destination_city }}" >
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Dirección</label>
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="destination_address" value="{{ $deliveryReport->destination_address }}">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {{-- <div class="row"> --}}
-            <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-                <div class="card">
-                    <div class="card__heading">
                         <h6 class="card__title">Información de Carga</h6>
                     </div>
                     <div class="card__body">
@@ -120,9 +89,35 @@
                     </div>
                 </div>
             </div>
-            {{-- </div> --}}
 
-            {{-- <div class="row"> --}}
+         </div>
+
+         <div class="row">
+
+            <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                <div class="card">
+                    <div class="card__heading">
+                        <h6 class="card__title">Información Destino</h6>
+                    </div>
+                    <div class="card__body">
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Estado</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" name="destination_state" value="{{ $deliveryReport->destination_state }}" >
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Ciudad</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" name="destination_city" value="{{ $deliveryReport->destination_city }}" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                 <div class="card">
                     <div class="card__heading">
@@ -154,8 +149,33 @@
                     </div>
                 </div>
             </div>
-            {{-- </div> --}}
-        </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+               <div class="card">
+                  <div class="card__heading">
+                     <h6 class="card__title">Mapa</h6>
+
+                  </div>
+                  <div class="card__body">
+                     {!! Mapper::renderJavascript() !!}
+                     <div class="form-group row">
+                        <label for="example-text-input" class="col-1 col-form-label">Dirección</label>
+                        <div class="col-11">
+                           <input type="text" id="location" class="form__control" name="destination_address" value="{{ $deliveryReport->destination_address }}">
+                           <input type="hidden" id="lat" class="form__control" name="lat">
+                           <input type="hidden" id="lng" class="form__control" name="lng">
+                        </div>
+                     </div>
+
+                        <div class="map__location">
+                           {!! Mapper::render() !!}
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </div>
 
         <div class="row">
             <div class="col-xs col-sm-12 col-md-6 col-lg-12 col-xl-12 ">
@@ -183,6 +203,8 @@
 @section('js')
     <script src="{{ asset('js/vendors/moment.js') }}"></script>
     <script src="{{ asset('js/vendors/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <!-- JS Google Maps -->
+  <script src="{{ asset('js/google-maps-custom.js') }}"></script>
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker6').datetimepicker({

@@ -1,0 +1,32 @@
+0000000000000000000000000000000000000000 f6cc7d9e931804c84388753a383cc11182ef1dd3 Luis Ramirez <me.luisramirez@gmail.com> 1501192864 -0600	commit (initial): First up, Laravel y Clients Controller
+f6cc7d9e931804c84388753a383cc11182ef1dd3 bd2629745a87b8b4ab905186f96fae870f2670b2 Luis Ramirez <me.luisramirez@gmail.com> 1501192994 -0600	commit: Borrar readme
+bd2629745a87b8b4ab905186f96fae870f2670b2 c04bfe39b4fa3399628c8769b80c1905fb26e902 Luis Ramirez <me.luisramirez@gmail.com> 1501198853 -0600	commit: Modelo Client, ClientsController, Dashboard y Users
+c04bfe39b4fa3399628c8769b80c1905fb26e902 a33f9f31cfc19ef078cf4a3287b26a279e84c41a Luis Ramirez <me.luisramirez@gmail.com> 1501219741 -0600	commit: Alta de Clientes
+a33f9f31cfc19ef078cf4a3287b26a279e84c41a 52d7795be5a2a20d95aba55eea823f8cf852f92f Luis Ramirez <me.luisramirez@gmail.com> 1501225606 -0600	commit: Editar y Eliminar clientes
+52d7795be5a2a20d95aba55eea823f8cf852f92f 083e1979c43cac65270b89fe2b7189fab03c5dec Luis Ramirez <me.luisramirez@gmail.com> 1501226928 -0600	commit: Seeders Clientes y Usuario
+083e1979c43cac65270b89fe2b7189fab03c5dec cefe436d733b041f1e96eb9dadcc58593c42abfc Luis Ramirez <me.luisramirez@gmail.com> 1501257916 -0600	commit: Paginación de Clientes
+cefe436d733b041f1e96eb9dadcc58593c42abfc e0b8bf41b3b1ddd0d2beebeebae5cf6c681b4e3f Luis Ramirez <me.luisramirez@gmail.com> 1501284500 -0600	commit: CRUD Transportes
+e0b8bf41b3b1ddd0d2beebeebae5cf6c681b4e3f 7ec8a2681893958165c281ccb177c1057d5c16fa Luis Ramirez <me.luisramirez@gmail.com> 1501315413 -0600	commit: Choferes CRUD
+7ec8a2681893958165c281ccb177c1057d5c16fa 81fc72f75c41dab4df08abc3a76b8fdf2dded9f3 Luis Ramirez <me.luisramirez@gmail.com> 1501402630 -0600	commit: CRUD Choferes, CRUD Multas para cada Chofer
+81fc72f75c41dab4df08abc3a76b8fdf2dded9f3 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d Luis Ramirez <me.luisramirez@gmail.com> 1501461784 -0600	commit: Problema de Relaciones para DeliveryReportController
+5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d Luis Ramirez <me.luisramirez@gmail.com> 1501468683 -0600	checkout: moving from master to 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d
+5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d 2a41d2269f92657427ef15270ba24b8d609071f0 Luis Ramirez <me.luisramirez@gmail.com> 1501526105 -0600	pull vimocar master: Fast-forward
+2a41d2269f92657427ef15270ba24b8d609071f0 1b18b8e3d84c9aa182efaaad4a544e143f419683 Luis Ramirez <me.luisramirez@gmail.com> 1501544395 -0600	commit: DeliveryReport Completado la vista y singular
+1b18b8e3d84c9aa182efaaad4a544e143f419683 c4a8da6eddae975d4e67fdc728c3e02ea4d24385 Luis Ramirez <me.luisramirez@gmail.com> 1501651563 -0600	commit: CRUD Reportes de Entrega
+c4a8da6eddae975d4e67fdc728c3e02ea4d24385 3e40db9d77b79aa2ce32a7a7af639d54a9808c99 Luis Ramirez <me.luisramirez@gmail.com> 1501697673 -0600	commit: Agregado Incidencias para los Reportes de Entregas
+3e40db9d77b79aa2ce32a7a7af639d54a9808c99 f86b73435ee383f17aac8b7a87c55ee3b6f9f5ed Luis Ramirez <me.luisramirez@gmail.com> 1501718248 -0600	commit: CRUD Mantenimientos
+f86b73435ee383f17aac8b7a87c55ee3b6f9f5ed c2fcaacd80656b65e25f549fe9c3f9a2744382bf Luis Ramirez <me.luisramirez@gmail.com> 1501798649 -0600	commit: Usuarios con roles y permisos
+c2fcaacd80656b65e25f549fe9c3f9a2744382bf 0e84ccb3e7d2a7532c99f3b5ce16ab69ebab264c Luis Ramirez <me.luisramirez@gmail.com> 1501813569 -0600	commit: Reporte PDF para Incidencias
+0e84ccb3e7d2a7532c99f3b5ce16ab69ebab264c 923fc4dd2220cec4f7678ee18346e05222457104 Luis Ramirez <me.luisramirez@gmail.com> 1501815189 -0600	commit: Página Error 403
+923fc4dd2220cec4f7678ee18346e05222457104 f710bc311d7a943f2fab2baae3fc215ea0510029 Luis Ramirez <me.luisramirez@gmail.com> 1501820428 -0600	commit: Dashboard
+f710bc311d7a943f2fab2baae3fc215ea0510029 dc0a853a3771663884328d831883b4d2533a06ca Luis Ramirez <me.luisramirez@gmail.com> 1502049978 -0600	commit: Cambio de Estilo, dejar Bootstrap Genérico
+dc0a853a3771663884328d831883b4d2533a06ca a36994ea54f049d72bee5e5b6d6bb07a82f1feca Luis Ramirez <me.luisramirez@gmail.com> 1502079590 -0600	commit: Fix delete foreignkey cascada y algúnos cambios de texto
+a36994ea54f049d72bee5e5b6d6bb07a82f1feca dc0a853a3771663884328d831883b4d2533a06ca Luis Ramirez <me.luisramirez@gmail.com> 1502506575 -0600	checkout: moving from a36994ea54f049d72bee5e5b6d6bb07a82f1feca to dc0a853a3771663884328d831883b4d2533a06ca
+dc0a853a3771663884328d831883b4d2533a06ca a36994ea54f049d72bee5e5b6d6bb07a82f1feca Luis Ramirez <me.luisramirez@gmail.com> 1502506855 -0600	checkout: moving from dc0a853a3771663884328d831883b4d2533a06ca to a36994e
+a36994ea54f049d72bee5e5b6d6bb07a82f1feca f15fe587405aced8ee98504145b65d0d5f92ec2a Luis Ramirez <me.luisramirez@gmail.com> 1502507136 -0600	pull https://luisramirez_@bitbucket.org/luisramirez_/vimocar.git: Fast-forward
+f15fe587405aced8ee98504145b65d0d5f92ec2a 8372c21208e5b6ed473d7c72a2c5cd801df63a57 Luis Ramirez <me.luisramirez@gmail.com> 1502582531 -0600	commit: Choferes upload files (Licence and C. Medical)
+8372c21208e5b6ed473d7c72a2c5cd801df63a57 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d Luis Ramirez <me.luisramirez@gmail.com> 1502654625 -0600	checkout: moving from 8372c21208e5b6ed473d7c72a2c5cd801df63a57 to 5a70ef7
+5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d 8372c21208e5b6ed473d7c72a2c5cd801df63a57 Luis Ramirez <me.luisramirez@gmail.com> 1502654709 -0600	checkout: moving from 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d to 8372c21
+8372c21208e5b6ed473d7c72a2c5cd801df63a57 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d Luis Ramirez <me.luisramirez@gmail.com> 1502655059 -0600	checkout: moving from 8372c21208e5b6ed473d7c72a2c5cd801df63a57 to master
+5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d 8372c21208e5b6ed473d7c72a2c5cd801df63a57 Luis Ramirez <me.luisramirez@gmail.com> 1502655103 -0600	checkout: moving from master to 8372c21
+8372c21208e5b6ed473d7c72a2c5cd801df63a57 2b28b74b40304336cf46f4b5361313bd2f6af879 Luis Ramirez <me.luisramirez@gmail.com> 1502732617 -0600	pull vimocar master: Fast-forward

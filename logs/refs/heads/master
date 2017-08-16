@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 f6cc7d9e931804c84388753a383cc11182ef1dd3 Luis Ramirez <me.luisramirez@gmail.com> 1501192864 -0600	commit (initial): First up, Laravel y Clients Controller
+f6cc7d9e931804c84388753a383cc11182ef1dd3 bd2629745a87b8b4ab905186f96fae870f2670b2 Luis Ramirez <me.luisramirez@gmail.com> 1501192994 -0600	commit: Borrar readme
+bd2629745a87b8b4ab905186f96fae870f2670b2 c04bfe39b4fa3399628c8769b80c1905fb26e902 Luis Ramirez <me.luisramirez@gmail.com> 1501198853 -0600	commit: Modelo Client, ClientsController, Dashboard y Users
+c04bfe39b4fa3399628c8769b80c1905fb26e902 a33f9f31cfc19ef078cf4a3287b26a279e84c41a Luis Ramirez <me.luisramirez@gmail.com> 1501219741 -0600	commit: Alta de Clientes
+a33f9f31cfc19ef078cf4a3287b26a279e84c41a 52d7795be5a2a20d95aba55eea823f8cf852f92f Luis Ramirez <me.luisramirez@gmail.com> 1501225606 -0600	commit: Editar y Eliminar clientes
+52d7795be5a2a20d95aba55eea823f8cf852f92f 083e1979c43cac65270b89fe2b7189fab03c5dec Luis Ramirez <me.luisramirez@gmail.com> 1501226928 -0600	commit: Seeders Clientes y Usuario
+083e1979c43cac65270b89fe2b7189fab03c5dec cefe436d733b041f1e96eb9dadcc58593c42abfc Luis Ramirez <me.luisramirez@gmail.com> 1501257916 -0600	commit: Paginación de Clientes
+cefe436d733b041f1e96eb9dadcc58593c42abfc e0b8bf41b3b1ddd0d2beebeebae5cf6c681b4e3f Luis Ramirez <me.luisramirez@gmail.com> 1501284500 -0600	commit: CRUD Transportes
+e0b8bf41b3b1ddd0d2beebeebae5cf6c681b4e3f 7ec8a2681893958165c281ccb177c1057d5c16fa Luis Ramirez <me.luisramirez@gmail.com> 1501315413 -0600	commit: Choferes CRUD
+7ec8a2681893958165c281ccb177c1057d5c16fa 81fc72f75c41dab4df08abc3a76b8fdf2dded9f3 Luis Ramirez <me.luisramirez@gmail.com> 1501402630 -0600	commit: CRUD Choferes, CRUD Multas para cada Chofer
+81fc72f75c41dab4df08abc3a76b8fdf2dded9f3 5a70ef71b219ade9dd70091ed1a5ef7d1daa8b8d Luis Ramirez <me.luisramirez@gmail.com> 1501461784 -0600	commit: Problema de Relaciones para DeliveryReportController

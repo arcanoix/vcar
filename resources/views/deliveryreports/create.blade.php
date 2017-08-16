@@ -71,37 +71,6 @@
             <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                 <div class="card">
                     <div class="card__heading">
-                        <h6 class="card__title">Información Destino</h6>
-                    </div>
-                    <div class="card__body">
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Estado</label>
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="destination_state" >
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Ciudad</label>
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="destination_city" >
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Dirección</label>
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="destination_address" >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {{-- <div class="row"> --}}
-            <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-                <div class="card">
-                    <div class="card__heading">
                         <h6 class="card__title">Información de Carga</h6>
                     </div>
                     <div class="card__body">
@@ -120,40 +89,88 @@
                     </div>
                 </div>
             </div>
-            {{-- </div> --}}
+         </div>
 
-            {{-- <div class="row"> --}}
+         <div class="row">
             <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                 <div class="card">
                     <div class="card__heading">
-                        <h6 class="card__title">Información de Transporte</h6>
+                        <h6 class="card__title">Información Destino</h6>
                     </div>
                     <div class="card__body">
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Transporte</label>
+                            <label for="example-text-input" class="col-2 col-form-label">Estado</label>
                             <div class="col-10">
-                                <select class="js-example-basic-single form-control" name="transport_id">
-                                    @foreach ($transportSelects as $transportSelect)
-                                        <option value="{{ $transportSelect->id }}">{{ $transportSelect->name }}</option>
-                                    @endforeach
-                                </select>
+                                <input class="form-control" type="text" name="destination_state" >
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-2 col-form-label">Chofer</label>
+                            <label for="example-text-input" class="col-2 col-form-label">Ciudad</label>
                             <div class="col-10">
-                                <select class="js-example-basic-single form-control" name="driver_id">
-                                    @foreach ($driverSelects as $driverSelect)
-                                        <option value="{{ $driverSelect->id }}">{{ $driverSelect->name }} {{ $driverSelect->lastname }}</option>
-                                    @endforeach
-                                </select>
+                                <input class="form-control" type="text" name="destination_city" >
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {{-- </div> --}}
-        </div>
+
+            <div class="col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+             <div class="card">
+                 <div class="card__heading">
+                     <h6 class="card__title">Información de Transporte</h6>
+                 </div>
+                 <div class="card__body">
+                     <div class="form-group row">
+                         <label for="example-text-input" class="col-2 col-form-label">Transporte</label>
+                         <div class="col-10">
+                             <select class="js-example-basic-single form-control" name="transport_id">
+                                 @foreach ($transportSelects as $transportSelect)
+                                     <option value="{{ $transportSelect->id }}">{{ $transportSelect->name }}</option>
+                                 @endforeach
+                             </select>
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label for="example-text-input" class="col-2 col-form-label">Chofer</label>
+                         <div class="col-10">
+                             <select class="js-example-basic-single form-control" name="driver_id">
+                                 @foreach ($driverSelects as $driverSelect)
+                                     <option value="{{ $driverSelect->id }}">{{ $driverSelect->name }} {{ $driverSelect->lastname }}</option>
+                                 @endforeach
+                             </select>
+                         </div>
+                     </div>
+                  </div>
+                </div>
+             </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+               <div class="card">
+                  <div class="card__heading">
+                     <h6 class="card__title">Mapa</h6>
+
+                  </div>
+                  <div class="card__body">
+                     {!! Mapper::renderJavascript() !!}
+                     <div class="form-group row">
+                        <label for="example-text-input" class="col-1 col-form-label">Dirección</label>
+                        <div class="col-11">
+                           <input type="text" id="location" class="form__control" name="destination_address">
+                           <input type="hidden" id="lat" class="form__control" name="lat">
+                           <input type="hidden" id="lng" class="form__control" name="lng">
+                        </div>
+                     </div>
+
+                    <div class="map__location">
+                       {!! Mapper::render() !!}
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
 
         <div class="row">
             <div class="col-xs col-sm-12 col-md-6 col-lg-12 col-xl-12 ">
@@ -181,6 +198,8 @@
 @section('js')
     <script src="{{ asset('js/vendors/moment.js') }}"></script>
     <script src="{{ asset('js/vendors/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <!-- JS Google Maps -->
+    <script src="{{ asset('js/google-maps-custom.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script type="text/javascript">
         $(function () {

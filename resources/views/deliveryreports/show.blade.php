@@ -93,6 +93,24 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+       <div class="col-md-12">
+          <div class="card">
+             <div class="card__heading">
+                <h6 class="card__title">Mapa</h6>
+
+             </div>
+             <div class="card__body">
+                {!! Mapper::renderJavascript() !!}
+
+               <div class="map__location">
+                  {!! Mapper::render() !!}
+               </div>
+             </div>
+          </div>
+       </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -112,5 +130,10 @@
         </div>
     </div>
 
-    
+
+@endsection
+
+@section('js')
+    <!-- JS Google Maps -->
+    <script src="{{ asset('js/google-maps-custom.js') }}"></script>
 @endsection

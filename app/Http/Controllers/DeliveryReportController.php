@@ -7,6 +7,7 @@ use App\Transport;
 use App\Client;
 use App\Driver;
 use PDF;
+use Mapper;
 use Illuminate\Http\Request;
 
 class DeliveryReportController extends Controller
@@ -25,6 +26,10 @@ class DeliveryReportController extends Controller
         $clientsSelects = Client::all();
         $transportSelects = Transport::all();
         $driverSelects = Driver::all();
+
+        // Show Map
+        Mapper::map(10.153395, -67.942244);
+
         // $deliveryReportClients = DeliveryReport::all();
         return view('deliveryreports.create', compact('deliveryReportClients', 'clientsSelects', 'transportSelects', 'driverSelects'));
     }
@@ -68,11 +73,15 @@ class DeliveryReportController extends Controller
         $deliveryReport->destination_state = $request->input('destination_state');
         $deliveryReport->destination_city = $request->input('destination_city');
         $deliveryReport->destination_address = $request->input('destination_address');
+        $deliveryReport->lat = $request->input('lat');
+        $deliveryReport->lng = $request->input('lng');
         $deliveryReport->load_type = $request->input('load_type');
         $deliveryReport->condition = $request->input('condition');
         $deliveryReport->incident = $request->input('incident');
         $deliveryReport->transport_id = $request->input('transport_id');
         $deliveryReport->driver_id = $request->input('driver_id');
+
+
 
         $deliveryReport->save();
 
@@ -83,6 +92,15 @@ class DeliveryReportController extends Controller
     public function show($id)
     {
         $deliveryReport = DeliveryReport::find($id);
+
+        // Show Map
+        if ($deliveryReport->lat) {
+            Mapper::map($deliveryReport->lat, $deliveryReport->lng);
+        }
+        else{
+           Mapper::map(10.153395, -67.942244);
+        }
+
         return view('deliveryreports.show', compact('deliveryReport'));
     }
 
@@ -93,6 +111,15 @@ class DeliveryReportController extends Controller
         $clientsSelects = Client::all();
         $transportSelects = Transport::all();
         $driverSelects = Driver::all();
+
+        // Show Map
+        if ($deliveryReport->lat) {
+            Mapper::map($deliveryReport->lat, $deliveryReport->lng);
+        }
+        else{
+           Mapper::map(10.153395, -67.942244);
+        }
+
         return view('deliveryreports.edit', compact('deliveryReport', 'clientsSelects', 'transportSelects', 'driverSelects', 'oldClient'));
     }
 
@@ -135,6 +162,8 @@ class DeliveryReportController extends Controller
         $deliveryReport->destination_state = $request->input('destination_state');
         $deliveryReport->destination_city = $request->input('destination_city');
         $deliveryReport->destination_address = $request->input('destination_address');
+        $deliveryReport->lat = $request->input('lat');
+        $deliveryReport->lng = $request->input('lng');
         $deliveryReport->load_type = $request->input('load_type');
         $deliveryReport->condition = $request->input('condition');
         $deliveryReport->incident = $request->input('incident');

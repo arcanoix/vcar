@@ -107,6 +107,15 @@
                <div class="map__location">
                   {!! Mapper::render() !!}
                </div>
+
+               <hr>
+               <input type="hidden" id="lat-js" value="{{ $deliveryReport->lat }}">
+               <input type="hidden" id="lng-js" value="{{ $deliveryReport->lng }}">
+
+               <div class="map__location__route">
+                  <h6 class="card__title">Mapa de Ruta</h6>
+                  <div id="map-canvas" style="height: 500px; width: 100%;"></div>
+               </div>
              </div>
           </div>
        </div>
@@ -136,4 +145,5 @@
 @section('js')
     <!-- JS Google Maps -->
     <script src="{{ asset('js/google-maps-custom.js') }}"></script>
+    <script src="{{ asset('js/google-map-rutas.js') }}"></script>
 @endsection

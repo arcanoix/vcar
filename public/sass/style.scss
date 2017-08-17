@@ -99,6 +99,13 @@ body {
    margin:10px 0;
 }
 
+.map__location__route {
+   margin: 25px 0;
+   .card__title {
+      margin-bottom: 20px;
+   }
+}
+
 /* - select2 -*/
 .select2-container--default .select2-selection--single {
     border: 1px solid rgba(0,0,0,.15)!important;

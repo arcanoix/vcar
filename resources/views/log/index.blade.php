@@ -29,18 +29,19 @@
                         <table class="table table--responsive thead--default undefined">
                           <thead>
                             <tr>
-                              <th>Nombre</th>
-                              <th>Apellido</th>
-
-                              <th>Acciones</th>
+                              <th>ID</th>
+                              <th>Tipo</th>
+                              <th>Descripción</th>
+                              <th>Fecha de Log</th>
                             </tr>
                           </thead>
                           <tbody>
                               @foreach ($logs as $log)
                                 <tr>
                                   <td>{{ $log->id }}</td>
+                                  <td>{{ $log->log_name }}</td>
                                   <td>{{ $log->description }}</td>
-
+                                  <td>{{ $log->created_at }}</td>
                                 </tr>
                                 @endforeach
                           </tbody>

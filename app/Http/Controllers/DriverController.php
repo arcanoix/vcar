@@ -62,8 +62,12 @@ class DriverController extends Controller
 
         $driver->medical_certificate = $fileCertificate;
 
-
         $driver->save();
+
+        activity('Alta de Chofer')
+          ->performedOn($driver)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha creado el chofer con nombre :subject.name');
 
         return back()->with('notification', ' Chofer dado de alta correctamente');
     }
@@ -108,6 +112,11 @@ class DriverController extends Controller
 
         $driver->save();
 
+        activity('Modificación de Chofer')
+          ->performedOn($driver)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha modificado el chofer con nombre :subject.name');
+
         return redirect('/choferes')->with('notification', ' Chofer actualizado correctamente');
         // return back()->with('notification', ' Chofer actualizado correctamente');
     }
@@ -118,6 +127,11 @@ class DriverController extends Controller
         $driver = Driver::find($id);
 
         $driver->delete();
+
+        activity('Chofer Eliminado')
+          ->performedOn($driver)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha eliminado el chofer con nombre :subject.name');
 
         return redirect('/choferes')->with('notification', 'Chofer eliminado correctamente');
     }

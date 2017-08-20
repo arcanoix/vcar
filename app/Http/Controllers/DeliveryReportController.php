@@ -81,11 +81,15 @@ class DeliveryReportController extends Controller
         $deliveryReport->transport_id = $request->input('transport_id');
         $deliveryReport->driver_id = $request->input('driver_id');
 
-
-
         $deliveryReport->save();
 
-        return back()->with('notification', ' Reporte de Entrega dado de alta correctamente');
+        activity('Alta de Entrega')
+          ->performedOn($deliveryReport)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha creado una entrega :subject.id');
+
+         //return back()->with('notification', 'Reporte de Entrega dado de alta correctamente');
+         return redirect('/entregas')->with('notification', 'Reporte de Entrega dado de alta correctamente');
     }
 
 
@@ -172,6 +176,11 @@ class DeliveryReportController extends Controller
 
         $deliveryReport->save();
 
+        activity('Modificación de Entrega')
+          ->performedOn($deliveryReport)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha modificado la entrega :subject.id');
+
         // return back()->with('notification', ' Reporte de Entrega actualizado correctamente');
         return redirect('/entregas')->with('notification', 'Reporte de Entrega actualizado correctamente');
     }
@@ -181,6 +190,11 @@ class DeliveryReportController extends Controller
     {
         $deliveryReport = DeliveryReport::find($id);
         $deliveryReport->delete();
+
+        activity('Entrega Eliminado')
+          ->performedOn($deliveryReport)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha eliminado la entrega :subject.id');
 
         return redirect('/entregas')->with('notification', 'Reporte de Entrega Eliminado');
     }

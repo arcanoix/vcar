@@ -46,6 +46,11 @@ class TransportController extends Controller
 
         $transport->save();
 
+        activity('Alta de Transporte')
+          ->performedOn($transport)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha creado el transporte con nombre :subject.name');
+
         return redirect('/transportes')->with('notification', 'Transporte registrado correctamente');
     }
 
@@ -89,6 +94,11 @@ class TransportController extends Controller
 
         $transport->save();
 
+        activity('Modificación de Transporte')
+          ->performedOn($transport)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha modificado el transporte con nombre :subject.name');
+
         return redirect('/transportes')->with('notification', 'Transporte actualizado correctamente');
     }
 
@@ -98,6 +108,11 @@ class TransportController extends Controller
         // delete
         $transport = Transport::find($id);
         $transport->delete();
+
+        activity('Transporte Eliminado')
+          ->performedOn($transport)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha eliminado el transporte con nombre :subject.name');
 
         return redirect('/transportes')->with('notification', 'Cliente eliminado correctamente');
     }

@@ -7,6 +7,7 @@ use App\DeliveryReport;
 use App\Maintenance;
 use App\Transport;
 use App\Driver;
+use Spatie\Activitylog\Models\Activity;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,14 +24,17 @@ class DashboardController extends Controller
         $countdeliveryReports = deliveryReport::all()->count();
 
         // Last Clients
-        $lastClients = Client::all()->take(5)->sortBy('id');
+        $lastClients = Client::orderBy('id', 'desc')->take(5)->get();
 
         // Last DeliveryReport
-        $lastDeliveryReports = DeliveryReport::all()->take(5)->sortBy('id');
+        $lastDeliveryReports = DeliveryReport::orderBy('id', 'desc')->take(5)->get();
 
         // Last Maintenance
-        $lastMaintenances = Maintenance::all()->take(5)->sortBy('id');
+        $lastMaintenances = Maintenance::orderBy('id', 'desc')->take(5)->get();
 
-        return view('dashboard.index', compact('countClients', 'countTransports', 'countDrivers', 'countdeliveryReports', 'lastClients', 'lastDeliveryReports', 'lastMaintenances'));
+        // Last Logs
+        $logs = Activity::orderBy('id', 'desc')->take(5)->get();
+
+        return view('dashboard.index', compact('countClients', 'countTransports', 'countDrivers', 'countdeliveryReports', 'lastClients', 'lastDeliveryReports', 'lastMaintenances', 'logs'));
     }
 }

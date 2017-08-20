@@ -50,7 +50,10 @@ class UserController extends Controller
         $user->password = Hash::make($request->input('password'));
         $user->save();
 
-        //activity()->log('Se ha creado un usuario nuevo');
+        activity('Crear Usuario')
+          ->performedOn($user)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha creado el usuario con nombre :subject.name');
 
         $user->roles()->attach((2));
 
@@ -102,6 +105,11 @@ class UserController extends Controller
 
         $user->save();
 
+        activity('Modificación de Usuario')
+          ->performedOn($user)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha modificado el usuario con nombre :subject.name');
+
         return redirect('/usuarios')->with('notification', 'Usuario actualizado correctamente');
     }
 
@@ -109,6 +117,11 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
+
+        activity('Usuario Eliminado')
+          ->performedOn($user)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha eliminado el usuario con nombre :subject.name');
 
         return redirect('/usuarios')->with('notification', 'Usuario eliminado correctamente');
     }

@@ -49,6 +49,24 @@
                                 <input class="form__control" type="text" name="cedula" value="{{ $client->cedula }}">
                             </div>
                         </div>
+                        <div class="form__group row">
+                            <label for="example-text-input" class="col-2 col__form__label">Direción</label>
+                            <div class="col-10">
+                                <input class="form__control" type="text" name="address" value="{{ $client->address }}">
+                            </div>
+                        </div>
+                        <div class="form__group row">
+                            <label for="example-text-input" class="col-2 col__form__label">Estado</label>
+                            <div class="col-10">
+                                <input class="form__control" type="text" name="state" value="{{ $client->state }}">
+                            </div>
+                        </div>
+                        <div class="form__group row">
+                            <label for="example-text-input" class="col-2 col__form__label">Ciudad</label>
+                            <div class="col-10">
+                                <input class="form__control" type="text" name="city" value="{{ $client->city }}">
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn--primary">Guardar</button>
 
                     </form>

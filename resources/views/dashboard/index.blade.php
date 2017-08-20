@@ -177,4 +177,37 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+       <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+          <div class="card">
+             <div class="card__heading">
+                  <h6 class="card__title">Registro de Actividad</h6>
+             </div>
+             <div class="card__body">
+                  <table class="table table--responsive thead--default undefined">
+                      <thead>
+                          <tr>
+                              <th>Tipo</th>
+                              <th>Descripción</th>
+                              <th>Fecha</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          @foreach ($logs as $log)
+                              <tr>
+                                 <td>{{ $log->log_name }}</td>
+                                 <td>{{ $log->description }}</td>
+                                 <td>{{ $log->created_at }}</td>
+                              </tr>
+                          @endforeach
+                      </tbody>
+                  </table>
+             </div>
+             <div class="card__footer">
+                  <a href="/log" class="badge badge--info">Todas los Registros</a>
+             </div>
+          </div>
+       </div>
+    </div>
 @endsection

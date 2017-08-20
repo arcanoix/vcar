@@ -59,6 +59,11 @@ class ClientsController extends Controller
 
         $client->save();
 
+        activity('Crear Cliente')
+          ->performedOn($client)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha creado el cliente con nombre :subject.name');
+
         return redirect('/clientes')->with('notification', 'Cliente registrado correctamente');
     }
 
@@ -96,9 +101,20 @@ class ClientsController extends Controller
 
         $client = Client::find($id);
 
-        $client->name = $request->input('name');
+         $client->name = $request->input('name');
+         $client->email = $request->input('email');
+         $client->phone = $request->input('phone');
+         $client->cedula = $request->input('cedula');
+         $client->address = $request->input('address');
+         $client->state = $request->input('state');
+         $client->city = $request->input('city');
 
         $client->save();
+
+        activity('Modificación de Cliente')
+          ->performedOn($client)
+          ->causedBy(auth()->user())
+          ->log(':causer.name ha modificado el cliente con nombre :subject.name');
 
         return redirect('/clientes')->with('notification', 'Cliente actualizado correctamente');
     }
@@ -108,6 +124,11 @@ class ClientsController extends Controller
         // delete
         $client = Client::find($id);
         $client->delete();
+
+        activity('Cliente Eliminado')
+         ->performedOn($client)
+         ->causedBy(auth()->user())
+         ->log(':causer.name ha eliminado el cliente con nombre :subject.name');
 
         return redirect('/clientes')->with('notification', 'Cliente eliminado correctamente');
     }

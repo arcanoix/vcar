@@ -7,7 +7,7 @@
             <div class="authentication">
                 <form class="authentication__form" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
-                    <img src="http://weare.pbmarketingllc.com/wp-content/uploads/2016/04/placeholder-client.png" alt="" class="img-fluid">
+                    <img src="{{asset('img/logo.jpg')}}" alt="" class="img-fluid">
 
                     <div class="form__group has--feedback {{ $errors->has('email') ? ' has-error' : '' }}">
                         <div class="input__group--style">

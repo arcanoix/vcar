@@ -45,6 +45,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn--primary">Guardar</button>
+                        <a href="/dashboard" class="btn btn--danger">Cancelar</a>
                     </form>
                 </div>
             </div>

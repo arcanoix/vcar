@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <button class="btn btn--primary" type="submit">Guardar</button>
-
+                        <a href="/dashboard" class="btn btn--danger">Cancelar</a>
                     </form>
                 </div>
             </div>

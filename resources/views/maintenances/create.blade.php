@@ -115,6 +115,7 @@
         <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn--primary">Guardar</button>
+                <a href="/dashboard" class="btn btn--danger">Cancelar</a>
             </div>
         </div>
     </form>

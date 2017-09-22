@@ -59,7 +59,7 @@
                                   </td>
                                   {{-- <td>{{ $driver->observation }}</td> --}}
                                   <td>
-                                      <a href="/choferes/{{ $driver->id}}/{id}" class="badge badge--default">Ver Perfil</a>
+                                      <a href="/choferes/{{ $driver->id}}" class="badge badge--default">Ver Perfil</a>
                                       <a href="/choferes/{{ $driver->id }}/edit" class="badge badge--info">Editar</a>
                                       <a href="/choferes/{{ $driver->id }}/delete" class="badge badge--danger">Eliminar</a>
                                   </td>

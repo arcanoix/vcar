@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     @yield('css')
     <!-- Custom styles for this template -->
-    <link href="{{ URL::asset('css/dashboard.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   </head>
 
   <body class="content content__authentication  ltr">

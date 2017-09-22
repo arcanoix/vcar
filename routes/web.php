@@ -113,7 +113,7 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::get('/mantenimientos/create', 'MaintenanceController@getCreate');
     Route::post('/mantenimientos/create', 'MaintenanceController@postCreate');
 
-    Route::get('/mantenimiento/{id}', 'MaintenanceController@show');
+    Route::get('/mantenimientos/{id}', 'MaintenanceController@show');
 
     Route::get('/mantenimientos/{id}/edit', 'MaintenanceController@edit');
     Route::post('/mantenimientos/{id}/edit', 'MaintenanceController@update');

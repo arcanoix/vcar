@@ -83,6 +83,8 @@ $factory->define(App\DeliveryReport::class, function (Faker\Generator $faker) {
         'destination_state' => $faker->state,
         'destination_city' => $faker->city,
         'destination_address'  => $faker->address,
+        'lat' => $faker->latitude($min = 8, $max = 9),
+        'lng' => $faker->longitude($min = -67, $max = -68),
         'load_type' => $faker->
             randomElement($array = array('General', 'Granel', 'Peligrosa', 'Perecedera', 'Frágil')),
         'condition' => $faker->randomElement($array = array('Condicion 1', 'Condicion 2')),

@@ -31,14 +31,14 @@
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Numero de Multa</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="number">
+                                <input class="form__control" type="text" name="number" value={{old('number')}}>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-2 col-form-label">Fecha de Multa</label>
                             <div class="col-10">
                                 <div class="input-group date" id="date-ticket" data-target-input="nearest">
-                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#date-ticket" name="date" />
+                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#date-ticket" name="date" value={{old('date')}}/>
                                    <span class="input-group-addon" data-target="#date-ticket" data-toggle="datetimepicker">
                                        <span class="fa fa-calendar"></span>
                                    </span>

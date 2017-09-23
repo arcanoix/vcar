@@ -28,27 +28,27 @@
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Nombre</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="name" >
+                                <input class="form__control" type="text" name="name" value={{old('name')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Apellido</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="lastname" >
+                                <input class="form__control" type="text" name="lastname" value={{old('lastname')}}>
                             </div>
                         </div>
 
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Licencia</label>
                             <div class="col-10">
-                                <input type="file" class="form__control" name="licence">
+                                <input type="file" class="form__control" name="licence" value={{old('licence')}}>
                             </div>
                         </div>
 
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Certificado Médico</label>
                             <div class="col-10">
-                                <input type="file" class="form__control" name="medical_certificate">
+                                <input type="file" class="form__control" name="medical_certificate" value={{old('medical_certificate')}}>
                             </div>
                         </div>
 
@@ -56,7 +56,7 @@
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Observaciones</label>
                             <div class="col-10">
-                                <textarea class="form__control" name="observation" rows="8"></textarea>
+                                <textarea class="form__control" name="observation" rows="8" value={{old('observation')}}></textarea>
                             </div>
                         </div>
 

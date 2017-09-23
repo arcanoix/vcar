@@ -43,7 +43,7 @@
                                 <label for="example-text-input" class="col-2 col-form-label">Fecha de Salida</label>
                                 <div class="col-10">
                                     <div class="input-group date" id="departure_date" data-target-input="nearest">
-                                       <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#departure_date" name="departure_date"/>
+                                       <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#departure_date" name="departure_date" value={{old('departure_date')}}/>
                                        <span class="input-group-addon" data-target="#departure_date" data-toggle="datetimepicker">
                                            <span class="fa fa-calendar"></span>
                                        </span>
@@ -56,7 +56,7 @@
                                 <label for="example-text-input" class="col-2 col-form-label">Fecha de Llegada</label>
                                 <div class="col-10">
                                     <div class="input-group date" id="delivery_date" data-target-input="nearest">
-                                       <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#delivery_date" name="delivery_date"/>
+                                       <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#delivery_date" name="delivery_date" value={{old('delivery_date')}}/>
                                        <span class="input-group-addon" data-target="#delivery_date" data-toggle="datetimepicker">
                                            <span class="fa fa-calendar"></span>
                                        </span>
@@ -77,13 +77,13 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-2 col-form-label">Tipo de Carga</label>
                             <div class="col-10">
-                                <input class="form-control" type="text" name="load_type" >
+                                <input class="form-control" type="text" name="load_type" value={{old('load_type')}}>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-2 col-form-label">Condición</label>
                             <div class="col-10">
-                                <input class="form-control" type="text" name="condition" >
+                                <input class="form-control" type="text" name="condition" value={{old('condition')}}>
                             </div>
                         </div>
                     </div>
@@ -101,14 +101,14 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-2 col-form-label">Estado</label>
                             <div class="col-10">
-                                <input class="form-control" type="text" name="destination_state" >
+                                <input class="form-control" type="text" name="destination_state" value={{old('destination_state')}}>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="example-text-input" class="col-2 col-form-label">Ciudad</label>
                             <div class="col-10">
-                                <input class="form-control" type="text" name="destination_city" >
+                                <input class="form-control" type="text" name="destination_city" value={{old('destination_city')}}>
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                      <div class="form-group row">
                          <label for="example-text-input" class="col-2 col-form-label">Transporte</label>
                          <div class="col-10">
-                             <select class="js-example-basic-single form-control" name="transport_id">
+                             <select class="js-example-basic-single form-control" name="transport_id" value={{old('transport_id')}}>
                                  @foreach ($transportSelects as $transportSelect)
                                      <option value="{{ $transportSelect->id }}">{{ $transportSelect->name }}</option>
                                  @endforeach
@@ -134,7 +134,7 @@
                      <div class="form-group row">
                          <label for="example-text-input" class="col-2 col-form-label">Chofer</label>
                          <div class="col-10">
-                             <select class="js-example-basic-single form-control" name="driver_id">
+                             <select class="js-example-basic-single form-control" name="driver_id" value={{old('driver_id')}}>
                                  @foreach ($driverSelects as $driverSelect)
                                      <option value="{{ $driverSelect->id }}">{{ $driverSelect->name }} {{ $driverSelect->lastname }}</option>
                                  @endforeach
@@ -158,9 +158,9 @@
                      <div class="form-group row">
                         <label for="example-text-input" class="col-1 col-form-label">Dirección</label>
                         <div class="col-11">
-                           <input type="text" id="location" class="form__control" name="destination_address">
-                           <input type="hidden" id="lat" class="form__control" name="lat">
-                           <input type="hidden" id="lng" class="form__control" name="lng">
+                           <input type="text" id="location" class="form__control" name="destination_address" value={{old('destination_address')}}>
+                           <input type="hidden" id="lat" class="form__control" name="lat" value={{old('lat')}}>
+                           <input type="hidden" id="lng" class="form__control" name="lng" value={{old('lng')}}>
                         </div>
                      </div>
 
@@ -180,7 +180,7 @@
                     </div>
                     <div class="card__body">
                         <p>Detalle la incidencia..</p>
-                        <textarea name="incident" rows="8" cols="80" class="form-control"></textarea>
+                        <textarea name="incident" rows="8" cols="80" class="form-control" value={{old('incident')}}></textarea>
                     </div>
                 </div>
             </div>

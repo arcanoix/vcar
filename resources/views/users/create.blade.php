@@ -29,13 +29,13 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">Nombre</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="name">
+                                <input class="form-control" type="text" name="name" value={{old('name')}}>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">E-mail</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="email">
+                                <input class="form-control" type="text" name="email" value={{old('email')}}>
                             </div>
                         </div>
                         <div class="form-group row">

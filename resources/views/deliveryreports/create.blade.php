@@ -5,11 +5,11 @@
 @section('content')
     <div class="row">
         <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <h5 class="breadcrumb__title">Alta de Entrega</h5>
+            <h5 class="breadcrumb__title">Solicitud de Entrega</h5>
             <nav class="breadcrumb">
                 <a class="breadcrumb__item" href="/">Dashboard</a>
                 <a class="breadcrumb__item" href="/entregas">Entregas</a>
-                <span class="breadcrumb__item active">Alta de Entrega</span></nav>
+                <span class="breadcrumb__item active">Solicitud de Entrega</span></nav>
         </div>
     </div>
 

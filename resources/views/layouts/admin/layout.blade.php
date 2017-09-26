@@ -163,7 +163,7 @@
                                   <a class="sidebar__link" href="/entregas">Todos las entregas</a>
                               </li>
                               <li class="sidebar__item">
-                                  <a class="sidebar__link" href="/entregas/create">Nuevo Entrega</a>
+                                  <a class="sidebar__link" href="/entregas/create">Nueva Solicitud de Entrega</a>
                               </li>
                               <li class="sidebar__item">
                                   <a class="sidebar__link" href="/entregas/incidencias">Incidencias</a>

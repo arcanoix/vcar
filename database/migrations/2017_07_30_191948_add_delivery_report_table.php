@@ -24,7 +24,7 @@ class AddDeliveryReportTable extends Migration
             $table->string('lng')->nullable();
             $table->string('load_type');
             $table->string('condition');
-            $table->text('incident');
+            $table->text('incident')->nullable();
             // transporte
             //chofer
             //cliente

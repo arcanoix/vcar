@@ -18,7 +18,7 @@
     </div>
 
     <div class="row">
-        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+        <div class="col-xs col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
             <div class="card">
                 <div class="card__heading">
                     <h6 class="card__title">Información General</h6>
@@ -29,13 +29,13 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">Nombre</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="name">
+                                <input class="form-control" type="text" name="name" value={{old('name')}}>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">E-mail</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="email">
+                                <input class="form-control" type="text" name="email" value={{old('email')}}>
                             </div>
                         </div>
                         <div class="form-group row">

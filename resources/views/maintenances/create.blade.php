@@ -31,7 +31,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">Transporte</label>
                             <div class="col-9">
-                                <select class="js-example-basic-single form-control" name="transport_id">
+                                <select class="js-example-basic-single form-control" name="transport_id" value={{old('transport_id')}}>
                                     @foreach ($transportSelects as $transportSelect)
                                         <option value="{{ $transportSelect->id }}">{{ $transportSelect->name }}</option>
                                     @endforeach
@@ -42,7 +42,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">Tipo de Mantenimiento</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="name" >
+                                <input class="form-control" type="text" name="name" value={{old('name')}}>
                             </div>
                         </div>
 
@@ -50,7 +50,7 @@
                             <label for="example-text-input" class="col-3 col-form-label">Fecha de Mantenimiento</label>
                             <div class="col-9">
                                 <div class="input-group date datetimepicker" id="last_check" data-target-input="nearest">
-                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#last_check" name="last_check"/>
+                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#last_check" name="last_check" value={{old('last_check')}}/>
                                    <span class="input-group-addon" data-target="#last_check" data-toggle="datetimepicker">
                                        <span class="fa fa-calendar"></span>
                                    </span>
@@ -61,7 +61,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">KM en mantenimiento</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="last_km" >
+                                <input class="form-control" type="text" name="last_km" value={{old('last_km')}}>
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@
                             <label for="example-text-input" class="col-3 col-form-label">Próxima Revision</label>
                             <div class="col-9">
                                 <div class="input-group date datetimepicker" id="next_check" data-target-input="nearest">
-                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#next_check" name="next_check"/>
+                                   <input type="text" class="form-control datetimepicker-input datetimepicker" data-target="#next_check" name="next_check" value={{old('next_check')}}/>
                                    <span class="input-group-addon" data-target="#next_check" data-toggle="datetimepicker">
                                        <span class="fa fa-calendar"></span>
                                    </span>
@@ -91,7 +91,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">KM Próxima revisión</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="next_km" >
+                                <input class="form-control" type="text" name="next_km" value={{old('next_km')}} >
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="card__body">
-                        <textarea name="observation" rows="8" cols="80" class="form-control"></textarea>
+                        <textarea name="observation" rows="8" cols="80" class="form-control" value={{old('observation')}}></textarea>
                     </div>
                 </div>
             </div>

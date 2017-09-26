@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+        <div class="col-xs col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
             <div class="card">
                 <div class="card__heading">
                     <h6 class="card__title">Información General</h6>
@@ -29,43 +29,43 @@
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Empresa</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="name">
+                                <input class="form__control" type="text" name="name" value={{old('name')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">E-mail</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="email">
+                                <input class="form__control" type="text" name="email" value={{old('email')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Teléfono</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="phone">
+                                <input class="form__control" type="text" name="phone" value={{old('phone')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Cedula</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="cedula">
+                                <input class="form__control" type="text" name="cedula" value={{old('celula')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Direción</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="address">
+                                <input class="form__control" type="text" name="address" value={{old('address')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Estado</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="state">
+                                <input class="form__control" type="text" name="state" value={{old('state')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Ciudad</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="city">
+                                <input class="form__control" type="text" name="city" value={{old('city')}}>
                             </div>
                         </div>
                         <button class="btn btn--primary" type="submit">Guardar</button>

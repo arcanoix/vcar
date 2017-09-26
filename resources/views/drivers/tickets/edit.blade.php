@@ -21,7 +21,7 @@
     </div>
 
     <div class="row">
-        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+        <div class="col-xs col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
             <div class="card">
                 <div class="card__heading">
                     <h6 class="card__title">Información General</h6>

@@ -35,7 +35,15 @@
                         <div class="form__group row">
                             <label for="example-text-input" class="col-3 col__form__label">Marca</label>
                             <div class="col-9">
-                                <input class="form__control" type="text" name="brand" value={{old('brand')}}>
+                               <select class="js-example-basic-single form-control" name="brand" value={{old('brand')}}>
+                                 <option value="Ford">Ford</option>
+                                 <option value="GeneralMotors">GeneralMotors</option>
+                                 <option value="Toyota">Toyota</option>
+                                 <option value="Encava">Encava</option>
+                                 <option value="Mack Trucks">Mack Trucks</option>
+                                 <option value="Kenworth">Kenworth</option>
+                                 <option value="Chevrolet">Chevrolet</option>
+                               </select>
                             </div>
                         </div>
                         <div class="form__group row">
@@ -52,4 +60,13 @@
         </div>
     </div>
 
+@endsection
+
+@section('js')
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function() {
+         $(".js-example-basic-single").select2();
+      });
+   </script>
 @endsection

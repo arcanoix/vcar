@@ -1,0 +1,59 @@
+.sidebar--bg {
+  background-color: #fff;
+}
+
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link {
+  color: #484848;
+}
+
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link.active {
+  color: #fff;
+  background-color: #F69458;
+}
+
+.sidebar__left .sidebar__menu .sidebar__header {
+  color: #484848;
+}
+
+.sidebar__left .sidebar__menu .sidebar__dropdown.active .sidebar__link {
+  background-color: #f2f2f2;
+  color: #484848;
+}
+
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:visited {
+  color: #484848;
+}
+
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
+  color: #fff;
+}
+
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
+  color: #484848;
+}
+
+.header__brand {
+  background-color: #F69458;
+}
+
+.card--primary {
+  background-color: #F69458;
+}
+
+.stats__widget .content__body .content__right {
+  background-color: #F69458;
+}
+
+.breadcrumb__item {
+  color: #F69458;
+}
+
+.page-link {
+  color: #F69458;
+}
+
+.page-item.active .page-link {
+  background-color: #F69458;
+  border-color: #F69458;
+}
+

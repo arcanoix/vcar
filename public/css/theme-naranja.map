@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../resources/assets/sass/theme-naranja.css",
+	"sources": [
+		"../../resources/assets/sass/theme-naranja.scss"
+	],
+	"sourcesContent": [
+		"// Variables\n$color-primary: #F69458;\n\n.sidebar--bg {\n    background-color: #fff;\n}\n.sidebar__left .sidebar__menu .sidebar__item .sidebar__link {\n    color: #484848;\n}\n.sidebar__left .sidebar__menu .sidebar__item .sidebar__link.active {\n    color: #fff;\n    background-color: $color-primary;\n}\n.sidebar__left .sidebar__menu .sidebar__header {\n    color: #484848;\n}\n.sidebar__left .sidebar__menu .sidebar__dropdown.active .sidebar__link {\n    background-color: #f2f2f2;\n    color: #484848;\n}\n.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:visited {\n    color: #484848;\n}\n.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {\n    color: #484848;\n}\n.header__brand {\n   background-color: $color-primary;\n}\n\n.card--primary {\n   background-color: $color-primary;\n}\n\n.stats__widget .content__body .content__right {\n   background-color: $color-primary;\n}\n\n.breadcrumb__item {\n    color: $color-primary;\n}\n\n.page-link {\n   color: $color-primary ;\n}\n.page-item.active .page-link {\n    background-color: $color-primary;\n    border-color: $color-primary;\n}\n"
+	],
+	"mappings": ";AAGA,AAAA,YAAY,CAAC;EACT,gBAAgB,EAAE,IAAK;CAC1B;;;AACD,AAA6C,cAA/B,CAAC,cAAc,CAAC,cAAc,CAAC,cAAc,CAAC;EACxD,KAAK,EAAE,OAAQ;CAClB;;;AACD,AAA2D,cAA7C,CAAC,cAAc,CAAC,cAAc,CAAC,cAAc,AAAA,OAAO,CAAC;EAC/D,KAAK,EAAE,IAAK;EACZ,gBAAgB,EAVJ,OAAO;CAWtB;;;AACD,AAA8B,cAAhB,CAAC,cAAc,CAAC,gBAAgB,CAAC;EAC3C,KAAK,EAAE,OAAQ;CAClB;;;AACD,AAAwD,cAA1C,CAAC,cAAc,CAAC,kBAAkB,AAAA,OAAO,CAAC,cAAc,CAAC;EACnE,gBAAgB,EAAE,OAAQ;EAC1B,KAAK,EAAE,OAAQ;CAClB;;;AACD,AAA2D,cAA7C,CAAC,cAAc,CAAC,cAAc,CAAC,cAAc,AAAA,QAAQ,CAAC;EAChE,KAAK,EAAE,OAAQ;CAClB;;;AACD,AAA2D,cAA7C,CAAC,cAAc,CAAC,cAAc,CAAC,cAAc,AAAA,MAAM,CAAC;EAC9D,KAAK,EAAE,OAAQ;CAClB;;;AACD,AAAA,cAAc,CAAC;EACZ,gBAAgB,EA1BH,OAAO;CA2BtB;;;AAED,AAAA,cAAc,CAAC;EACZ,gBAAgB,EA9BH,OAAO;CA+BtB;;;AAED,AAA8B,cAAhB,CAAC,cAAc,CAAC,eAAe,CAAC;EAC3C,gBAAgB,EAlCH,OAAO;CAmCtB;;;AAED,AAAA,iBAAiB,CAAC;EACd,KAAK,EAtCO,OAAO;CAuCtB;;;AAED,AAAA,UAAU,CAAC;EACR,KAAK,EA1CQ,OAAO;CA2CtB;;;AACD,AAAkB,UAAR,AAAA,OAAO,CAAC,UAAU,CAAC;EACzB,gBAAgB,EA7CJ,OAAO;EA8CnB,YAAY,EA9CA,OAAO;CA+CtB",
+	"names": []
+}

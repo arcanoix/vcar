@@ -36,7 +36,7 @@ class MaintenanceController extends Controller
         ];
 
         $messages = [
-            'name.required' => 'Necesitas ingresar el nombre de del mantenimiento',
+            'name.required' => 'Necesitas seleccionar el mantenimiento',
             'last_check.required' => 'Necesitas ingresar la fecha del mantenimiento',
             'last_km.required' => 'Necesitas ingresar los KM actuales en el mantenimiento',
             'next_check.required' => 'Necesitas ingresar fecha para la siguiente revisión',

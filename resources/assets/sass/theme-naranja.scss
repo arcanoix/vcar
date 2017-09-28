@@ -1,0 +1,52 @@
+// Variables
+$color-primary: #F69458;
+
+.sidebar--bg {
+    background-color: #fff;
+}
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link {
+    color: #484848;
+}
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link.active {
+    color: #fff;
+    background-color: $color-primary;
+}
+.sidebar__left .sidebar__menu .sidebar__header {
+    color: #484848;
+}
+.sidebar__left .sidebar__menu .sidebar__dropdown.active .sidebar__link {
+    background-color: #f2f2f2;
+    color: #484848;
+}
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:visited {
+    color: #484848;
+}
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
+    color: #fff;
+}
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
+    color: #484848;
+}
+.header__brand {
+   background-color: $color-primary;
+}
+
+.card--primary {
+   background-color: $color-primary;
+}
+
+.stats__widget .content__body .content__right {
+   background-color: $color-primary;
+}
+
+.breadcrumb__item {
+    color: $color-primary;
+}
+
+.page-link {
+   color: $color-primary ;
+}
+.page-item.active .page-link {
+    background-color: $color-primary;
+    border-color: $color-primary;
+}

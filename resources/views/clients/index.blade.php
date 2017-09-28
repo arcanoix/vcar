@@ -32,6 +32,7 @@
                               <th>E-mail</th>
                               <th>Teléfono</th>
                               <th>Cedula</th>
+                              <th>Activo</th>
                               <th>Acciones</th>
                             </tr>
                           </thead>
@@ -43,6 +44,23 @@
                                   <td>{{ $client->email }}</td>
                                   <td>{{ $client->phone }}</td>
                                   <td>{{ $client->cedula }}</td>
+                                  <td>
+                                    @if ($client->active === 1)
+                                       <form action="" method="post">
+                                          {{ csrf_field() }}
+                                          <input type="hidden" value="{{ $client->id }}" name="id">
+                                          <input type="hidden" value="0" name="active" >
+                                          <button class="badge badge--danger" type="submit">Desactivar</button>
+                                       </form>
+                                    @else
+                                       <form action="" method="post">
+                                          {{ csrf_field() }}
+                                          <input type="hidden" value="{{ $client->id }}" name="id">
+                                          <input type="hidden" value="1" name="active" >
+                                          <button class="badge badge--success" type="submit">Activar</button>
+                                       </form>
+                                    @endif
+                                  </td>
                                   <td>
                                       <a href="/clientes/{{ $client->id }}" class="badge badge--success">Perfil</a>
                                       <a href="/clientes/{{ $client->id }}/edit" class="badge badge--info">Editar</a>

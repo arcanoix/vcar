@@ -25,11 +25,16 @@
 }
 
 .sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
-  color: #fff;
+  color: #484848;
 }
 
 .sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
   color: #484848;
+}
+
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
+  color: #484848;
+  background-color: #ffe1cf;
 }
 
 .header__brand {

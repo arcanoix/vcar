@@ -42,6 +42,7 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
 
     //Clientes
     Route::get('/clientes', 'ClientsController@index');
+    Route::post('/clientes', 'ClientsController@active');
 
     Route::get('/clientes/create', 'ClientsController@getCreate');
     Route::post('/clientes/create', 'ClientsController@postCreate');
@@ -52,6 +53,8 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::post('/clientes/{id}/edit', 'ClientsController@update');
 
     Route::get('/clientes/{id}/delete', 'ClientsController@delete');
+
+
 
     //Transporte
     Route::get('/transportes', 'TransportController@index');
@@ -121,5 +124,5 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::get('/mantenimientos/{id}/delete', 'MaintenanceController@delete');
 
     //log
-    Route::get('/log','LogController@index');
+    Route::get('/log', 'LogController@index');
 });

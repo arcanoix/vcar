@@ -21624,15 +21624,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 /* line 17590, /Users/lramirez/_sites/vimo/resources/assets/sass/style.scss */
-.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
+/*.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
   color: rgba(255, 255, 255, 0.55);
-}
+}*/
 
 /* line 17593, /Users/lramirez/_sites/vimo/resources/assets/sass/style.scss */
-.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
+/*.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
   color: #fff;
-  background-color: #1a1c1f;
-}
+  background-color: red;
+}*/
 
 /* line 17600, /Users/lramirez/_sites/vimo/resources/assets/sass/style.scss */
 .sidebar__left .sidebar__menu .sidebar__dropdown .sidebar__link:after {
@@ -21819,12 +21819,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /* line 17737, /Users/lramirez/_sites/vimo/resources/assets/sass/style.scss */
 .sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
   color: rgba(255, 255, 255, 0.55);
-}
-
-/* line 17740, /Users/lramirez/_sites/vimo/resources/assets/sass/style.scss */
-.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
-  color: #fff;
-  background-color: #1a1c1f;
 }
 
 /* line 17747, /Users/lramirez/_sites/vimo/resources/assets/sass/style.scss */

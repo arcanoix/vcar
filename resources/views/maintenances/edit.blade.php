@@ -43,7 +43,17 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-3 col-form-label">Tipo de Mantenimiento</label>
                             <div class="col-9">
-                                <input class="form-control" type="text" name="name" value="{{ $maintenance->name }}" >
+                               <select class="js-example-basic-single form-control" name="name" value={{old('name')}}>
+                                 <option value="{{ $maintenance->name }}">{{ $maintenance->name }}</option>
+                                 <option value="Mantenimiento general">Mantenimiento general</option>
+                                 <option value="Correa de tiempo">Correa de tiempo</option>
+                                 <option value="Cambios de bujías">Cambios de bujías</option>
+                                 <option value="Aceite">Aceite</option>
+                                 <option value="Mecánica ligera">Mecánica ligera</option>
+                                 <option value="Frenos">Frenos</option>
+                                 <option value="Revisión completa">Revisión completa</option>
+                                 <option value="Tren delantero">Tren delantero</option>
+                               </select>
                             </div>
                         </div>
 

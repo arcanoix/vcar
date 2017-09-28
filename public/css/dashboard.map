@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../resources/assets/sass/dashboard.css",
+	"sources": [
+		"../../resources/assets/sass/dashboard.scss"
+	],
+	"sourcesContent": [
+		"/*\n * Base structure\n */\n/* Move down content because we have a fixed navbar that is 50px tall */\nbody {\n    padding-top: 50px;\n}\n/*\n * Typography\n */\nh1 {\n    margin-bottom: 20px;\n    padding-bottom: 9px;\n    border-bottom: 1px solid #eee;\n}\n/*\n * Sidebar\n */\n.sidebar {\n    position: fixed;\n    top: 51px;\n    bottom: 0;\n    left: 0;\n    z-index: 1000;\n    padding: 20px;\n    overflow-x: hidden;\n    overflow-y: auto;\n    /* Scrollable contents if viewport is shorter than content. */\n    border-right: 1px solid #eee;\n}\n/* Sidebar navigation */\n.sidebar {\n    padding-left: 0;\n    padding-right: 0;\n}\n\n.sidebar .nav {\n    margin-bottom: 20px;\n}\n\n.sidebar .nav-item {\n    width: 100%;\n}\n\n.sidebar .nav-item + .nav-item {\n    margin-left: 0;\n}\n\n.sidebar .nav-link {\n    border-radius: 0;\n}\n/*\n * Dashboard\n */\n/* Placeholders */\n.placeholders {\n    padding-bottom: 3rem;\n}\n\n.placeholder img {\n    padding-top: 1.5rem;\n    padding-bottom: 1.5rem;\n}\n"
+	],
+	"mappings": "AAAA;;GAEG;AACH,wEAAwE;;AACxE,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,IAAK;CACrB;;AACD;;GAEG;;AACH,AAAA,EAAE,CAAC;EACC,aAAa,EAAE,IAAK;EACpB,cAAc,EAAE,GAAI;EACpB,aAAa,EAAE,cAAe;CACjC;;AACD;;GAEG;;AACH,AAAA,QAAQ,CAAC;EACL,QAAQ,EAAE,KAAM;EAChB,GAAG,EAAE,IAAK;EACV,MAAM,EAAE,CAAE;EACV,IAAI,EAAE,CAAE;EACR,OAAO,EAAE,IAAK;EACd,OAAO,EAAE,IAAK;EACd,UAAU,EAAE,MAAO;EACnB,UAAU,EAAE,IAAK;EACjB,8DAA8D;EAC9D,YAAY,EAAE,cAAe;CAChC;;AACD,wBAAwB;;AACxB,AAAA,QAAQ,CAAC;EACL,YAAY,EAAE,CAAE;EAChB,aAAa,EAAE,CAAE;CACpB;;;AAED,AAAS,QAAD,CAAC,IAAI,CAAC;EACV,aAAa,EAAE,IAAK;CACvB;;;AAED,AAAS,QAAD,CAAC,SAAS,CAAC;EACf,KAAK,EAAE,IAAK;CACf;;;AAED,AAAqB,QAAb,CAAC,SAAS,GAAG,SAAS,CAAC;EAC3B,WAAW,EAAE,CAAE;CAClB;;;AAED,AAAS,QAAD,CAAC,SAAS,CAAC;EACf,aAAa,EAAE,CAAE;CACpB;;AACD;;GAEG;AACH,kBAAkB;;AAClB,AAAA,aAAa,CAAC;EACV,cAAc,EAAE,IAAK;CACxB;;;AAED,AAAa,YAAD,CAAC,GAAG,CAAC;EACb,WAAW,EAAE,MAAO;EACpB,cAAc,EAAE,MAAO;CAC1B",
+	"names": []
+}

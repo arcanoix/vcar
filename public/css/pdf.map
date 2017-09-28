@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../resources/assets/sass/pdf.css",
+	"sources": [
+		"../../resources/assets/sass/pdf.scss"
+	],
+	"sourcesContent": [
+		"body{\n    font-family: Verdana, Geneva, sans-serif;\n    color: #292b2c;\n\n    a {\n        color:#292b2c;\n        text-decoration: none;\n        &:visited{\n            color:#292b2c;\n        }\n    }\n}\nh1 {\n    font-size: 30px;\n    font-family: sans-serif;\n}\n\ntable {\n    border-collapse: collapse;\n}\n\ntable, th, td {\n    border: 1px solid #292b2c;\n}\n\nth {\n    background-color: #292b2c;\n    color: white;\n}\n\nth, td {\n    padding: 5px;\n    text-align: left;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2}\n"
+	],
+	"mappings": ";AAAA,AAAA,IAAI,CAAA;EACA,WAAW,EAAE,2BAA4B;EACzC,KAAK,EAAE,OAAQ;CASlB;;;AAXD,AAII,IAJA,CAIA,CAAC,CAAC;EACE,KAAK,EAAC,OAAQ;EACd,eAAe,EAAE,IAAK;CAIzB;;;AAVL,AAII,IAJA,CAIA,CAAC,AAGI,QAAQ,CAAA;EACL,KAAK,EAAC,OAAQ;CACjB;;;AAGT,AAAA,EAAE,CAAC;EACC,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,UAAW;CAC3B;;;AAED,AAAA,KAAK,CAAC;EACF,eAAe,EAAE,QAAS;CAC7B;;;AAED,AAAA,KAAK,EAAE,AAAA,EAAE,EAAE,AAAA,EAAE,CAAC;EACV,MAAM,EAAE,iBAAkB;CAC7B;;;AAED,AAAA,EAAE,CAAC;EACC,gBAAgB,EAAE,OAAQ;EAC1B,KAAK,EAAE,KAAM;CAChB;;;AAED,AAAA,EAAE,EAAE,AAAA,EAAE,CAAC;EACH,OAAO,EAAE,GAAI;EACb,UAAU,EAAE,IAAK;CACpB;;;AAED,AAAiB,EAAf,AAAA,UAAW,CAAA,AAAA,IAAI,EAAE;EAAC,gBAAgB,EAAE,OAAQ;CAAE",
+	"names": []
+}

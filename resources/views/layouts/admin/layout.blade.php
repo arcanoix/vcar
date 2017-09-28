@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link id="theme" rel="stylesheet" type="text/css" href="{{ asset('css/theme-azul.css') }}"/>
   </head>
 
   <body class="content ltr">
@@ -199,6 +200,11 @@
 
                           </ul>
                       </li>
+                       <li class="sidebar__header">Cambiar color</li>
+                       <li class="sidebar__item"><a class="sidebar__link link--single" href="#" onclick="setStyleSheet('{{ asset('css/theme-azul.css') }}')" ><i class="link__icon fa fa-paint-brush"></i><span class="link__name">Azul</span></a>
+                       </li>
+                       <li class="sidebar__item"><a class="sidebar__link link--single" href="#" onclick="setStyleSheet('{{ asset('css/theme-naranja.css') }}')"><i class="link__icon fa fa-paint-brush"></i><span class="link__name">Naranja</span></a>
+                       </li>
                      @endrole
 
                   </ul>
@@ -226,6 +232,12 @@
     <script src="{{ asset('js/dashboard.min.js') }}"></script>
     <script src="{{ asset('js/template-editor.min.js') }}"></script>
     <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script type="text/javascript">
+       function setStyleSheet(url){
+          var stylesheet = document.getElementById("theme");
+          stylesheet.setAttribute('href', url);
+       }
+    </script>
     @yield('js')
 
   </body>

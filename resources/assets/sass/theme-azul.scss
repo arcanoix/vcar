@@ -1,5 +1,6 @@
 // Variables
 $color-primary: #20B5D6;
+$color-secondary: #d3edf5;
 
 .sidebar--bg {
     background-color: #fff;
@@ -22,11 +23,16 @@ $color-primary: #20B5D6;
     color: #484848;
 }
 .sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
-    color: #fff;
+    color: #484848;
 }
 .sidebar__left .sidebar__menu .sidebar__item .sidebar__link:focus {
     color: #484848;
 }
+.sidebar__left .sidebar__menu .sidebar__item .sidebar__link:hover {
+  color: #484848;
+  background-color: $color-secondary;
+}
+
 .header__brand {
    background-color: $color-primary;
 }

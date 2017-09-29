@@ -133,4 +133,15 @@ class ClientsController extends Controller
 
         return redirect('/clientes')->with('notification', 'Cliente eliminado correctamente');
     }
+
+    public function active(Request $request)
+    {
+        $client = Client::find($request->input('id'));
+
+        $client->active = $request->input('active');
+
+        $client->save();
+
+        return redirect('/clientes')->with('notification', 'Se cambio el Estado del cliente');
+    }
 }

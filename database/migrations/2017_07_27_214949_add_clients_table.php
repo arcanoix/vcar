@@ -22,7 +22,7 @@ class AddClientsTable extends Migration
             $table->string('address');
             $table->string('state');
             $table->string('city');
-            $table->bolean('active');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

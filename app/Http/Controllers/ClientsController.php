@@ -142,6 +142,11 @@ class ClientsController extends Controller
 
         $client->save();
 
+        activity('Cliente se le ha cambiado el status')
+         ->performedOn($client)
+         ->causedBy(auth()->user())
+         ->log(':causer.name ha cambiado el status del cliente con nombre :subject.name');
+
         return redirect('/clientes')->with('notification', 'Se cambio el Estado del cliente');
     }
 }

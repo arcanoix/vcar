@@ -116,4 +116,11 @@ class TransportController extends Controller
 
         return redirect('/transportes')->with('notification', 'Cliente eliminado correctamente');
     }
+
+    public function search($dato = "")
+    {
+
+        $transports = Transport::Search($dato)->paginate(30);
+        return view('transports.search')->with('transports', $transports);
+    }
 }

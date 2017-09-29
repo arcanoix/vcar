@@ -56,3 +56,10 @@ $color-secondary: #d3edf5;
     background-color: $color-primary;
     border-color: $color-primary;
 }
+
+.btn.btn--info {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    border: 1px solid $color-primary;
+}

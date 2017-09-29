@@ -54,6 +54,8 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
 
     Route::get('/clientes/{id}/delete', 'ClientsController@delete');
 
+    Route::get('search-client/{dato?}', 'ClientsController@search');
+
 
 
     //Transporte
@@ -69,6 +71,8 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
 
     Route::get('/transportes/{id}/delete', 'TransportController@delete');
 
+    Route::get('search-transport/{dato?}', 'TransportController@search');
+
     //Choferes
     Route::get('/choferes', 'DriverController@index');
 
@@ -81,6 +85,8 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::post('/choferes/{id}/edit', 'DriverController@update');
 
     Route::get('/choferes/{id}/delete', 'DriverController@delete');
+
+    Route::get('search-driver/{dato?}', 'DriverController@search');
 
     // Multas de Choferes
     Route::get('/choferes/{id}/multas', 'TicketController@index');
@@ -109,8 +115,11 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
 
     Route::get('/entregas/{id}/delete', 'DeliveryReportController@delete');
 
+    Route::get('search-deliveryreport/{dato?}', 'DeliveryReportController@search');
 
-    // Reportes de Entrega
+
+
+    // Mantenimiento
     Route::get('/mantenimientos', 'MaintenanceController@index');
 
     Route::get('/mantenimientos/create', 'MaintenanceController@getCreate');
@@ -122,6 +131,9 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
     Route::post('/mantenimientos/{id}/edit', 'MaintenanceController@update');
 
     Route::get('/mantenimientos/{id}/delete', 'MaintenanceController@delete');
+
+    Route::get('search-maintenance/{dato?}', 'MaintenanceController@search');
+
 
     //log
     Route::get('/log', 'LogController@index');

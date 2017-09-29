@@ -135,4 +135,11 @@ class DriverController extends Controller
 
         return redirect('/choferes')->with('notification', 'Chofer eliminado correctamente');
     }
+
+    public function search($dato = "")
+    {
+
+        $drivers = Driver::Search($dato)->paginate(30); //la funcion Busqueda es un Scope insertado en el modelo teacher
+        return view('drivers.search')->with("drivers", $drivers);
+    }
 }

@@ -62,3 +62,10 @@
   border-color: #F69458;
 }
 
+.btn.btn--info {
+  color: #fff;
+  background-color: #F69458;
+  border-color: #F69458;
+  border: 1px solid #F69458;
+}
+

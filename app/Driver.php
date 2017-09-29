@@ -24,4 +24,13 @@ class Driver extends Model
     {
         return $this->belongsTo(DeliveryReport::class, 'id');
     }
+
+    public function scopeSearch($query, $dato = "")
+    {
+
+        $result = $query->where('name', 'like', '%'.$dato.'%')
+            ->orWhere('lastname', 'like', '%'.$dato.'%');
+
+        return $result;
+    }
 }

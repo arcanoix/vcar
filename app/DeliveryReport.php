@@ -26,4 +26,13 @@ class DeliveryReport extends Model
     {
         return $this->hasOne(Client::class, 'id', 'client_id');
     }
+    public function scopeSearch($query, $dato = "")
+    {
+
+        $result = $query->where('id', 'like', '%'.$dato.'%')
+            ->orWhere('departure_date', 'like', '%'.$dato.'%')
+            ->orWhere('delivery_date', 'like', '%'.$dato.'%');
+
+        return $result;
+    }
 }

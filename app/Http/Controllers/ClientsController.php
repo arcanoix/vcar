@@ -144,4 +144,11 @@ class ClientsController extends Controller
 
         return redirect('/clientes')->with('notification', 'Se cambio el Estado del cliente');
     }
+
+    public function search($dato = "")
+    {
+
+        $clients = Client::Search($dato)->paginate(30);
+        return view('clients.search')->with('clients', $clients);
+    }
 }

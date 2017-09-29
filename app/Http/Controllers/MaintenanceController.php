@@ -122,4 +122,10 @@ class MaintenanceController extends Controller
 
         return redirect('/mantenimientos')->with('notification', 'Mantenimiento Eliminado correctamente');
     }
+
+    public function search($dato = "")
+    {
+        $maintenances = Maintenance::Search($dato)->paginate(30);
+        return view('maintenances.search')->with('maintenances', $maintenances);
+    }
 }

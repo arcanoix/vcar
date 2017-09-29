@@ -2,11 +2,19 @@
 
 @section('content')
     <div class="row">
-        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-xs col-sm-8 col-md-8 col-lg-8 col-xl-8">
             <h5 class="breadcrumb__title">Todos los Clientes</h5>
             <nav class="breadcrumb">
                 <a class="breadcrumb__item" href="/">Dashboard</a>
                 <span class="breadcrumb__item active">Clientes</span></nav>
+        </div>
+        <div class="col-xs col-sm-4 col-md-4 col-lg-4 col-xl-4">
+           <div class="input-group  my-2 my-lg-0">
+             <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Buscar" id="client_data">
+             <span class="input-group-btn">
+                <button class="btn btn--info btn-flat" type="button" onclick="searchclient();" >Buscar</button>
+             </span>
+          </div>
         </div>
     </div>
 
@@ -16,13 +24,15 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="card">
-                <div class="card__heading">
-                    <h6 class="card__title">Clientes</h6>
-                </div>
-                <div class="card__body">
+      <div id="container-principal">
+         <div id="container-clients">
+            <div class="row">
+               <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="card">
+                     <div class="card__heading">
+                        <h6 class="card__title">Clientes</h6>
+                     </div>
+                     <div class="card__body">
                     @if (!$clients->isEmpty())
                         <table class="table table--responsive thead--default undefined">
                           <thead>
@@ -84,7 +94,25 @@
                         </div>
                     @endif
                 </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+@endsection
+
+@section('js')
+   <script type="text/javascript">
+   function searchclient(){
+      var dato=$("#client_data").val();
+      var url="search-client/"+dato+"";
+
+      $("#container-principal").html($("#container-clients").html());
+      $.get(url,function(resul){
+           $("#container-principal").html(resul);
+      })
+
+      }
+   </script>
+
 @endsection

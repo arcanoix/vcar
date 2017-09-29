@@ -100,9 +100,8 @@ class DeliveryReportController extends Controller
         // Show Map
         if ($deliveryReport->lat) {
             Mapper::map($deliveryReport->lat, $deliveryReport->lng);
-        }
-        else{
-           Mapper::map(10.153395, -67.942244);
+        } else {
+            Mapper::map(10.153395, -67.942244);
         }
 
         return view('deliveryreports.show', compact('deliveryReport'));
@@ -119,9 +118,8 @@ class DeliveryReportController extends Controller
         // Show Map
         if ($deliveryReport->lat) {
             Mapper::map($deliveryReport->lat, $deliveryReport->lng);
-        }
-        else{
-           Mapper::map(10.153395, -67.942244);
+        } else {
+            Mapper::map(10.153395, -67.942244);
         }
 
         return view('deliveryreports.edit', compact('deliveryReport', 'clientsSelects', 'transportSelects', 'driverSelects', 'oldClient'));
@@ -213,4 +211,10 @@ class DeliveryReportController extends Controller
     //
     //     return $pdf->download('invoice.pdf');
     // }
+    public function search($dato = "")
+    {
+
+        $deliveryReports = DeliveryReport::Search($dato)->paginate(30);
+        return view('deliveryreports.search')->with('deliveryReports', $deliveryReports);
+    }
 }

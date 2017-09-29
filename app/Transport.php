@@ -19,4 +19,14 @@ class Transport extends Model
     {
         return $this->belongsTo(Maintenance::class, 'id');
     }
+
+    public function scopeSearch($query, $dato = "")
+    {
+
+        $result = $query->where('name', 'like', '%'.$dato.'%')
+            ->orWhere('brand', 'like', '%'.$dato.'%')
+            ->orWhere('model', 'like', '%'.$dato.'%');
+
+        return $result;
+    }
 }

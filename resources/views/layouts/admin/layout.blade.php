@@ -53,12 +53,7 @@
                   </div>
                   <!-- ///// Content Left /////-->
                   <div class="content__left">
-                      <div class="hamburger hamburger--collapse is--active sidebar--toggle">
-                          <div class="hamburger__box">
-                              <div class="hamburger__inner"></div>
-                          </div>
-                      </div>
-                      <button class="btn btn__screen" type="button"><i class="fa fa-arrows-alt"></i></button>
+                      
                   </div>
                   <!-- ///// Content Right /////-->
                   <ul class="nav content__right">

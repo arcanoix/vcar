@@ -40,13 +40,13 @@
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Teléfono</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="phone" value="{{ $client->phone }}">
+                                <input class="form__control" type="number" name="phone" value="{{ $client->phone }}">
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="" class="col-2 col__form__label">Cedula</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="cedula" value="{{ $client->cedula }}">
+                                <input class="form__control" type="number" name="cedula" value="{{ $client->cedula }}">
                             </div>
                         </div>
                         <div class="form__group row">

@@ -17,7 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link id="theme" rel="stylesheet" type="text/css" href="{{ asset('css/theme-azul.css') }}"/>
+    <link id="theme" rel="stylesheet" type="text/css" href="{{ asset('css/theme-naranja.css') }}"/>
   </head>
 
   <body class="content ltr">
@@ -229,6 +229,7 @@
     <script src="{{ asset('js/custom.min.js') }}"></script>
     <script type="text/javascript">
        function setStyleSheet(url){
+         console.log(url);
           var stylesheet = document.getElementById("theme");
           stylesheet.setAttribute('href', url);
        }

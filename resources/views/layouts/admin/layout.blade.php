@@ -53,7 +53,7 @@
                   </div>
                   <!-- ///// Content Left /////-->
                   <div class="content__left">
-                      
+
                   </div>
                   <!-- ///// Content Right /////-->
                   <ul class="nav content__right">
@@ -229,6 +229,7 @@
     <script src="{{ asset('js/custom.min.js') }}"></script>
     <script type="text/javascript">
        function setStyleSheet(url){
+         console.log(url);
           var stylesheet = document.getElementById("theme");
           stylesheet.setAttribute('href', url);
        }

@@ -41,13 +41,13 @@
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Teléfono</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="phone" value={{old('phone')}}>
+                                <input class="form__control" type="number" name="phone" value={{old('phone')}}>
                             </div>
                         </div>
                         <div class="form__group row">
                             <label for="example-text-input" class="col-2 col__form__label">Cedula</label>
                             <div class="col-10">
-                                <input class="form__control" type="text" name="cedula" value={{old('celula')}}>
+                                <input class="form__control" type="number" name="cedula" value={{old('cedula')}}>
                             </div>
                         </div>
                         <div class="form__group row">

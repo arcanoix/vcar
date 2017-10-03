@@ -137,4 +137,8 @@ Route::group(['middleware' => ['role:administrador|usuario']], function () {
 
     //log
     Route::get('/log', 'LogController@index');
+
+    //Reportes
+    Route::get('/report_driver','PdfController@driver');
+    Route::get('/report_user','PdfController@user');
 });

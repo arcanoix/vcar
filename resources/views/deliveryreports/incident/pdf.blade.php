@@ -9,7 +9,7 @@
     <title>Vimocar PDF</title>
 
     <!-- Bootstrap CSS -->
-    <link href="{{ URL::asset('css/pdf.css') }}" rel="stylesheet">
+    <link href="css/pdf.css" rel="stylesheet">
   </head>
 
   <body>

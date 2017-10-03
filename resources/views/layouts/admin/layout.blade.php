@@ -178,6 +178,20 @@
                           </ul>
                       </li>
 
+                      <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse {{ Request::is('reportes*') ? 'active' : '' }}" href="#"><i class="link__icon fa fa fa-book "></i><span class="link__name">Reportes</span></a>
+                          <ul class="sidebar__submenu dropdown--collapse">
+                              <li class="sidebar__item">
+                                  <a class="sidebar__link" href="/report_driver">Conductores</a>
+                              </li>
+                              <li class="sidebar__item">
+                                  <a class="sidebar__link" href="/report_user">Usuarios</a>
+                              </li>
+                              <li class="sidebar__item">
+                                  <a class="sidebar__link" href="/entregas/incidencias/pdf">Incidencias</a>
+                              </li>
+                          </ul>
+                      </li>
+
                     @role('administrador')
                       <li class="sidebar__header">Administración</li>
                       <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse {{ Request::is('usuarios*') ? 'active' : '' }}" href="#"><i class="link__icon fa fa-magic"></i><span class="link__name">Usuarios</span></a>
@@ -195,12 +209,22 @@
 
                           </ul>
                       </li>
-                       <li class="sidebar__header">Cambiar color</li>
-                       <li class="sidebar__item"><a class="sidebar__link link--single" href="#" onclick="setStyleSheet('{{ asset('css/theme-azul.css') }}')" ><i class="link__icon fa fa-paint-brush"></i><span class="link__name">Azul</span></a>
-                       </li>
-                       <li class="sidebar__item"><a class="sidebar__link link--single" href="#" onclick="setStyleSheet('{{ asset('css/theme-naranja.css') }}')"><i class="link__icon fa fa-paint-brush"></i><span class="link__name">Naranja</span></a>
-                       </li>
+
+                      <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse {{ Request::is('tema*') ? 'active' : '' }}" href="#"><i class="link__icon fa fa fa-book "></i><span class="link__name">Tema</span></a>
+                          <ul class="sidebar__submenu dropdown--collapse">
+                              <li class="sidebar__item">
+                              <a class="sidebar__link link--single" href="#" onclick="setStyleSheet('{{ asset('css/theme-azul.css') }}')" ><i class="link__icon fa fa-paint-brush"></i><span class="link__name">Azul</span></a>
+
+                              </li>
+                              <li class="sidebar__item">
+                                <a class="sidebar__link link--single" href="#" onclick="setStyleSheet('{{ asset('css/theme-naranja.css') }}')"><i class="link__icon fa fa-paint-brush"></i><span class="link__name">Naranja</span></a>
+                              </li>
+                          </ul>
+                      </li>
+
+
                      @endrole
+
 
                   </ul>
                   {{-- <div class="footer__sidebar text-center">
@@ -235,7 +259,7 @@
        }
     </script>
     <script>
-      
+
     </script>
     @yield('js')
 
